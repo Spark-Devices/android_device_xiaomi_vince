@@ -65,6 +65,9 @@ KERNEL_TOOLCHAIN_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-11/bi
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
+# APEX
+DEXPREOPT_GENERATE_APEX_IMAGE := true
+
 # Audio
 AUDIO_FEATURE_ENABLED_ANC_HEADSET := true
 AUDIO_FEATURE_ENABLED_ALAC_OFFLOAD := true
