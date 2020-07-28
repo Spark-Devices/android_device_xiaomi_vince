@@ -475,7 +475,7 @@ PRODUCT_COPY_FILES += \
 
 # USB HAL
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service.basic \
+    android.hardware.usb@1.0-service.msm8953 \
     android.hardware.usb.gadget@1.0.vendor:64
 
 # Vibrator
