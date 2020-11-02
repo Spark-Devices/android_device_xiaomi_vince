@@ -24,6 +24,7 @@ $(call inherit-product, device/xiaomi/vince/device.mk)
 # Inherit some common CherishOS stuff.
 $(call inherit-product, vendor/cherish/config/common.mk)
 TARGET_BOOT_ANIMATION_RES := 1440
+TARGET_USES_BLUR := false
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vince
