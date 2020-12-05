@@ -238,6 +238,15 @@ service.qti.ims.enabled=1 \
 vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
 persist.vendor.radio.add_power_save=1
 
+# Radio (IMS)
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.vendor.ims.disableIMSLogs=1 \
+persist.vendor.ims.disableADBLogs=1 \
+persist.vendor.ims.disableDebugDataPathLogs=1 \
+persist.vendor.ims.disableDebugLogs=1 \
+persist.vendor.ims.disableSigHandler=1 \
+persist.vendor.ims.disableQXDMLogs=1
+
 # SurfaceFlinger
 PRODUCT_PROPERTY_OVERRIDES += \
 debug.sf.early_phase_offset_ns=1500000 \
