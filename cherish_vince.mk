@@ -26,6 +26,10 @@ $(call inherit-product, vendor/cherish/config/common.mk)
 TARGET_BOOT_ANIMATION_RES := 1440
 TARGET_USES_BLUR := false
 
+# Added Gapps Stuff
+CHERISH_WITHGAPPS := true
+TARGET_GAPPS_ARCH := arm64
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vince
 PRODUCT_NAME := cherish_vince
@@ -34,6 +38,7 @@ PRODUCT_MODEL := Redmi 5 Plus
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
 BOARD_VENDOR := Xiaomi
+CHERISH_BUILD_TYPE := OFFICIAL
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
