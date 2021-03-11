@@ -29,6 +29,7 @@ TARGET_USES_BLUR := false
 # Added Gapps Stuff
 CHERISH_WITHGAPPS := true
 TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vince
