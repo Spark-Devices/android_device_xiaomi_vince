@@ -9,9 +9,6 @@ allow qti_init_shell self:socket create;
 
 allow qti_init_shell { sysfs sysfs_dm }:file write;
 
-allow qti_init_shell self:capability dac_override;
-allow qti_init_shell self:capability dac_read_search;
-
 # R
 allow qti_init_shell vfat:dir { search read getattr };
 allow qti_init_shell vfat:file { getattr read open };

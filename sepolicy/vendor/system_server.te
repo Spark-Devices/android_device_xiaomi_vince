@@ -1,16 +1,7 @@
-
-# Service manager
-allow system_server default_android_service:service_manager { add find };
-
 # vibrator
 allow system_server sysfs_vibrator:file read;
 
 # R
 allow system_server exported_camera_prop:file { read open };
-allow system_server sysfs:file { read open };
-
 allow system_server userspace_reboot_exported_prop:file { read };
-
-# System Server sensors files access.
-allow system_server system_data_file:file execmod;
 
