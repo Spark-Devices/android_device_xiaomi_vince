@@ -25,6 +25,10 @@ $(call inherit-product, device/xiaomi/vince/device.mk)
 $(call inherit-product, vendor/cherish/config/common.mk)
 TARGET_BOOT_ANIMATION_RES := 1440
 
+# Maintainer
+PRODUCT_GENERIC_PROPERTIES += \
+    ro.cherish.maintainer=androsapien
+
 # Gapps
 CHERISH_WITHGAPPS := true
 TARGET_GAPPS_ARCH := arm64
