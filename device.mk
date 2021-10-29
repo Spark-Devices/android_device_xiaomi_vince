@@ -37,7 +37,9 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
 
-# Soong namespaces
+# Board
+PRODUCT_USES_QCOM_HARDWARE := true
+PRODUCT_BOARD_PLATFORM := msm8953
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
@@ -175,7 +177,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8953 \
     memtrack.msm8953 \
     libdisplayconfig \
-	libvulkan \
+    libvulkan \
     liboverlay \
     libqdMetaData.system \
     libgenlock \
@@ -227,7 +229,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
     SystemUI \
     GoogleDialer
-    
+
 # Healthd
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
