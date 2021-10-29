@@ -33,6 +33,7 @@ audio.offload.video=true \
 persist.vendor.audio.fluence.speaker=true \
 persist.vendor.audio.fluence.voicecall=true \
 persist.vendor.audio.fluence.voicerec=false \
+persist.vendor.audio.fluence.voicecomm=true \
 persist.vendor.audio.hw.binder.size_kbyte=1024 \
 ro.config.media_vol_steps=25 \
 ro.config.vc_call_vol_steps=6 \
@@ -152,18 +153,12 @@ persist.debug.coresight.config=stm-events
 PRODUCT_PROPERTY_OVERRIDES += \
 debug.composition.type=c2d \
 debug.cpurend.vsync=false \
-debug.egl.hw=1 \
-debug.enable.sglscale=1 \
 debug.gralloc.enable_fb_ubwc=1 \
-debug.hwui.renderer=skiagl \
 debug.mdpcomp.idletime=600 \
 debug.mdpcomp.logs=0 \
-debug.performance.tuning=1 \
 debug.sf.disable_backpressure=1 \
 debug.sf.disable_hwc=0 \
 debug.sf.enable_hwc_vds=1 \
-debug.sf.gpu_comp_tiling=1 \
-debug.sf.hw=1 \
 debug.sf.latch_unsignaled=1 \
 debug.sf.recomputecrop=0 \
 dev.pm.dyn_samplingrate=1 \
@@ -171,15 +166,13 @@ persist.demo.hdmirotationlock=false \
 persist.hwc.enable_vds=1 \
 persist.hwc.mdpcomp.enable=true \
 persist.hwc.ptor.enable=true \
-ro.opengles.version=196610 \
 ro.qualcomm.cabl=0 \
 ro.vendor.display.cabl=2 \
 sdm.debug.disable_skip_validate=1 \
 vendor.display.disable_skip_validate=1 \
 vendor.display.disable_rotator_downscale=1 \
 vendor.display.enable_default_color_mode=1 \
-vendor.gralloc.enable_fb_ubwc=1 \
-video.accelerate.hw=1
+vendor.gralloc.enable_fb_ubwc=1
 
 # DPM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -212,6 +205,16 @@ ro.frp.pst=/dev/block/bootdevice/by-name/config
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.com.google.ime.kb_pad_port_b=1 \
 ro.com.google.ime.corner_key_r=35
+
+# Graphics
+PRODUCT_PRODUCT_PROPERTIES += \
+debug.hwui.renderer=skiagl \
+debug.sdm.support_writeback=0 \
+debug.enable.sglscale=1 \
+debug.sf.gpu_comp_tiling=1 \
+ro.opengles.version=196610 \
+ro.hardware.egl=adreno \
+ro.hardware.vulkan=adreno
 
 # Logging
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -287,7 +290,6 @@ ro.telephony.default_network=22,22 \
 ro.telephony.use_old_mnc_mcc_format=true \
 service.qti.ims.enabled=1 \
 vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
-persist.vendor.radio.add_power_save=1
 
 # Radio (IMS)
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -347,3 +349,10 @@ ro.zram.periodic_wb_delay_hours=24
 # Enable QC2 bufferqueue block-pool
 PRODUCT_PROPERTY_OVERRIDES += \
 vendor.qc2.use.bqpool=1
+
+# Performance Tweaks
+PRODUCT_PROPERTY_OVERRIDES += \
+debug.performance.tuning=1 \
+debug.egl.hw=1 \
+debug.sf.hw=1 \
+video.accelerate.hw=1
