@@ -156,11 +156,6 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
 
-# Dex
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI \
-    NexusLauncherRelease
-
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
@@ -222,6 +217,12 @@ PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \
     libwifi-hal-ctrl
 
+# Hacks
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Settings \
+    SystemUI \
+    GoogleDialer
+    
 # Healthd
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
