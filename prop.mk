@@ -50,7 +50,6 @@ vendor.audio.parser.ip.buffer.size=262144 \
 vendor.audio.playback.mch.downsample=true \
 vendor.audio.safx.pbe.enabled=true \
 vendor.audio.tunnel.encode=false \
-vendor.audio.hw.aac.encoder=true \
 vendor.audio.use.sw.alac.decoder=true \
 vendor.audio.use.sw.ape.decoder=true \
 vendor.audio_hal.period_size=192 \
