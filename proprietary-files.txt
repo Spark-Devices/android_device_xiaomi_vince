@@ -1024,13 +1024,6 @@ vendor/lib64/libqti-perfd.so|3446c05a2ad52222b339f47d4c6d6b85198e2b2d
 vendor/lib64/libqti-perfd-client.so|cf1db630be11536a27a0ac66646c0024d78c80f7
 vendor/lib64/libqti-util.so|834cc98315887e57a5f229f9ee1a0d20d0d8f4c3
 
-# Perf (configs) - from LA.UM.9.6.2.r1-03600-89xx.0
-vendor/etc/perf/commonresourceconfigs.xml|47651621904d0a0ea42b72bc9a0df27f99eaeab6
-vendor/etc/perf/perfboostsconfig.xml|618e52bd61709c940839086f5f5fb1dd3aa01ca2
-vendor/etc/perf/perfconfigstore.xml|a53be50dbf91c78daf1cddcd3539ffc8ea0902c0
-vendor/etc/perf/targetconfig.xml|6106b22017b4e759c5804d12f439d2d09d567706
-vendor/etc/perf/targetresourceconfigs.xml|d72216867a557eb37b14a1975da40ff0225b6c55
-
 # Peripheral manager - from LA.UM.9.6.2.r1-03600-89xx.0
 vendor/bin/pm-proxy|08a2ac87306f772c62e5ef997ab6d021f450f33c
 vendor/bin/pm-service|189948eee015a50d52817d70854f531f5eed8668
