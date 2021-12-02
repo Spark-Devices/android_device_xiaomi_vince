@@ -335,11 +335,6 @@ persist.vendor.usb.config.extra=none
 PRODUCT_PROPERTY_OVERRIDES += \
 wifi.interface=wlan0
 
-# Wifi-Display
-PRODUCT_PROPERTY_OVERRIDES += \
-persist.debug.wfd.enable=1 \
-persist.sys.wfd.virtual=0
-
 # ZRAM
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.zram.mark_idle_delay_mins=60 \
