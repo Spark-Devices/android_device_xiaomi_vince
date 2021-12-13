@@ -276,6 +276,11 @@ persist.vendor.ims.disableDebugLogs=1 \
 persist.vendor.ims.disableSigHandler=1 \
 persist.vendor.ims.disableQXDMLogs=1
 
+# SOC
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.soc.manufacturer=QTI \
+ro.soc.model=MSM8953
+
 # SurfaceFlinger
 PRODUCT_PROPERTY_OVERRIDES += \
 debug.sf.use_phase_offsets_as_durations=1 \
