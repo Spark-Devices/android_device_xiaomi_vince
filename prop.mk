@@ -125,6 +125,10 @@ vendor.camera.hal1.packagelist=com.android.camera2 \
 persist.vendor.camera.CDS=off \
 persist.vendor.camera.video.CDS=off
 
+# Charger
+PRODUCT_PRODUCT_PROPERTIES += \
+ro.charger.enable_suspend=true
+
 # Cne
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.cne.feature=1
