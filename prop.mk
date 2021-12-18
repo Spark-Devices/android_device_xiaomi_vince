@@ -140,6 +140,7 @@ debug.composition.type=c2d \
 debug.cpurend.vsync=false \
 debug.egl.hw=1 \
 debug.enable.sglscale=1 \
+debug.hwui.use_buffer_age=false \
 debug.gralloc.enable_fb_ubwc=1 \
 debug.hwui.renderer=skiagl \
 debug.renderengine.backend=skiaglthreaded \
