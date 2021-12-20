@@ -108,9 +108,9 @@ sys.vendor.shutdown.waittime=500
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-camera.display.lmax=1280x720 \
-camera.display.umax=1920x1080 \
-camera.lowpower.record.enable=1 \
+persist.vendor.camera.display.lmax=1280x720 \
+persist.vendor.camera.display.umax=1920x1080 \
+vendor.camera.lowpower.record.enable=1 \
 media.camera.ts.monotonic=1 \
 persist.camera.mct.debug=0 \
 persist.camera.iface.logs=0 \
