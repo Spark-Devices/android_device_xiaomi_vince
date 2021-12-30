@@ -25,16 +25,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 # Inherit from vince device
 $(call inherit-product, device/xiaomi/vince/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Spark-OS stuff.
+$(call inherit-product, vendor/spark/config/common_full_phone.mk)
 
-# Lineage/crdroid Stuff
-TARGET_FACE_UNLOCK_SUPPORTED := true
+# Spark flags
+TARGET_FACE_UNLOCK_SUPPORTED := true #if it's available
 TARGET_BOOT_ANIMATION_RES := 720
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vince
-PRODUCT_NAME := lineage_vince
+PRODUCT_NAME := spark_vince
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 5 Plus
 PRODUCT_MANUFACTURER := Xiaomi

@@ -21,7 +21,7 @@ PRODUCT_SHIPPING_API_LEVEL := 25
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-spark
 
 # RRO (Runtime Resource Overlay)
 PRODUCT_ENFORCE_RRO_TARGETS := *
@@ -150,10 +150,6 @@ PRODUCT_PACKAGES += \
     camera.msm8953 \
     libmm-qcamera \
     libdng_sdk.vendor
-
-# GrapheneCamera
-PRODUCT_PACKAGES += \
-    GrapheneCamera
 
 # Consumerir
 PRODUCT_PACKAGES += \
