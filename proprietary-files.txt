@@ -779,11 +779,9 @@ vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so|feee131f714ed9
 vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so|c9d0251df63d8e34b6d70a59ad7b774c9f640fa1
 
 # FM Radio - from LA.UM.9.6.2.r1-03600-89xx.0
-system_ext/lib64/fm_helium.so|55ef376cc802574df92025bebaba1cebcc74a918
-system_ext/lib64/libfm-hci.so|0cfbf3d84724428721973cc7ad22f5d1e1368591
-system_ext/lib64/vendor.qti.hardware.fm@1.0.so|b6bdde84366a79b7d49f98a2eef932dff4f87981
-vendor/lib64/ftm_fm_lib.so|cf59c54bece5b0e30d3cbf98aff1922b13ceecd2
+-system_ext/lib64/vendor.qti.hardware.fm@1.0.so|b6bdde84366a79b7d49f98a2eef932dff4f87981
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|7eb9a18ddc6b8199aa81770add4998ca0886c2a0
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|f7494923e84b136a44f02699082a7e0a380f94e9
 
 # Gatekeeper - from LA.UM.8.6.r1-04400-89xx.0
 vendor/lib/hw/gatekeeper.msm8953.so|c17725b59dac2effb3423edc60085366dd629e62
@@ -797,7 +795,7 @@ vendor/bin/xtra-daemon|f13622743c1bb2c59aedb95e110b65e1c50f3bf4
 vendor/bin/xtwifi-client|55627c891f384be1b6e8de56d71681f28d940671
 vendor/bin/xtwifi-inet-agent|f805841e5c8ca3b0af620486a64a37148daa0980
 vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc|d3844699c845ce5de4c8b50548a2095f92dd0235
--vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml|1c344aacaa6d17a1585ba58b2e6d438dcfe31fad
+-vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml|9a81fed695dc07889ca30ecc0dcd29d21e1c9580
 -vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml|6514b13f55abc0acc28e004c35ff93fb972d61a9
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so|6fd669a8546d013f692ad508c0e89c05bae3fc8f
 vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so|5ba11b0c54c625e3dbb01c247846d2ec174e6c5f
