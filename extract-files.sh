@@ -32,9 +32,9 @@ VENDOR=xiaomi
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-LINEAGE_ROOT="${MY_DIR}/../../.."
+ANDROID_ROOT="${MY_DIR}/../../.."
 
-HELPER="${LINEAGE_ROOT}/vendor/lineage/build/tools/extract_utils.sh"
+HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -42,7 +42,7 @@ fi
 source "${HELPER}"
 
 # Default to sanitizing the vendor folder before extraction
-CLEAN_VENDOR=true
+CLEAN_VENDOR=false
 
 SECTION=
 KANG=
@@ -71,7 +71,7 @@ if [ -z "${SRC}" ]; then
 fi
 
 # Initialize the helper
-setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}" false "${CLEAN_VENDOR}"
+setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
 extract "${MY_DIR}"/proprietary-files.txt "${SRC}" \
         "${KANG}" --section "${SECTION}"
@@ -80,13 +80,38 @@ function blob_fixup() {
 	case "${1}" in
 
 	product/lib64/libdpmframework.so)
-	patchelf --add-needed libdpmframework_shim.so "${2}"
+	    "${PATCHELF}" --add-needed libdpmframework_shim.so "${2}"
+	;;
+	vendor/lib/hw/camera.msm8953.so)
+	    "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
+	;;
+        vendor/lib/libFaceGrade.so)
+	    "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
+	;;
+	vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc)
+	    sed -i 's/fps_hal/vendor.fps_hal/' "${2}"
+	    sed -i 's/group.*/& uhid/' "${2}"
+	;;
+	vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so)
+	    "${PATCHELF_0_8}" --remove-needed "libprotobuf-cpp-lite.so" "${2}"
+	;;
+	vendor/lib/libmmcamera_ppeiscore.so)
+	    "${PATCHELF}" --add-needed libmmcamera_ppeiscore_shim.so  "${DEVICE_BLOB_ROOT}"/vendor/lib/libmmcamera_ppeiscore.so
+	;;
+	vendor/lib/libmmcamera2_iface_modules.so)
+	    # Always set 0 (Off) as CDS mode in iface_util_set_cds_mode
+	    sed -i -e 's|\x1d\xb3\x20\x68|\x1d\xb3\x00\x20|g' "${2}"
+	    PATTERN_FOUND=$(hexdump -ve '1/1 "%.2x"' "${2}" | grep -E -o "1db30020" | wc -l)
+	    if [ $PATTERN_FOUND != "1" ]; then
+	        echo "Critical blob modification weren't applied on ${2}!"
+	        exit;
+	    fi
 	;;
 	esac
 
 }
 
-DEVICE_BLOB_ROOT="${LINEAGE_ROOT}"/vendor/"${VENDOR}"/"${DEVICE}"/proprietary
+DEVICE_BLOB_ROOT="${ANDROID_ROOT}"/vendor/"${VENDOR}"/"${DEVICE}"/proprietary
 
 # Camera configs
 sed -i "s|/system/etc/camera|/vendor/etc/camera|g" "${DEVICE_BLOB_ROOT}"/vendor/lib/libmmcamera2_sensor_modules.so
