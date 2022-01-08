@@ -32,9 +32,9 @@ VENDOR=xiaomi
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-CHERISH_ROOT="${MY_DIR}/../../.."
+ANDROID_ROOT="${MY_DIR}/../../.."
 
-HELPER="${CHERISH_ROOT}/tools/extract-utils/extract_utils.sh"
+HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -71,7 +71,7 @@ if [ -z "${SRC}" ]; then
 fi
 
 # Initialize the helper
-setup_vendor "${DEVICE}" "${VENDOR}" "${CHERISH_ROOT}" false "${CLEAN_VENDOR}"
+setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
 extract "${MY_DIR}"/proprietary-files.txt "${SRC}" \
         "${KANG}" --section "${SECTION}"
@@ -79,13 +79,13 @@ extract "${MY_DIR}"/proprietary-files.txt "${SRC}" \
 function blob_fixup() {
 	case "${1}" in
 
-	product/lib64/libdpmframework.so)
-	    "${PATCHELF}" --add-needed libdpmframework_shim.so "${2}"
+	system_ext/lib64/libdpmframework.so)
+	    "${PATCHELF}" --add-needed "libdpmframework_shim.so" "${2}"
 	;;
 	vendor/lib/hw/camera.msm8953.so)
 	    "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
 	;;
-        vendor/lib/libFaceGrade.so)
+	vendor/lib/libFaceGrade.so)
 	    "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
 	;;
 	vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc)
@@ -96,7 +96,7 @@ function blob_fixup() {
 	    "${PATCHELF_0_8}" --remove-needed "libprotobuf-cpp-lite.so" "${2}"
 	;;
 	vendor/lib/libmmcamera_ppeiscore.so)
-	    "${PATCHELF}" --add-needed libmmcamera_ppeiscore_shim.so  "${DEVICE_BLOB_ROOT}"/vendor/lib/libmmcamera_ppeiscore.so
+	    "${PATCHELF}" --add-needed "libmmcamera_ppeiscore_shim.so" "${2}"
 	;;
 	vendor/lib/libmmcamera2_iface_modules.so)
 	    # Always set 0 (Off) as CDS mode in iface_util_set_cds_mode
@@ -111,7 +111,7 @@ function blob_fixup() {
 
 }
 
-DEVICE_BLOB_ROOT="${CHERISH_ROOT}"/vendor/"${VENDOR}"/"${DEVICE}"/proprietary
+DEVICE_BLOB_ROOT="${ANDROID_ROOT}"/vendor/"${VENDOR}"/"${DEVICE}"/proprietary
 
 # Camera configs
 sed -i "s|/system/etc/camera|/vendor/etc/camera|g" "${DEVICE_BLOB_ROOT}"/vendor/lib/libmmcamera2_sensor_modules.so

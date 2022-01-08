@@ -1,5 +1,5 @@
 #
-# system.prop for vince
+# prop.mk for vince
 #
 
 # ART
@@ -55,13 +55,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 vendor.audio.feature.snd_mon.enable=true \
 vendor.audio.feature.compr_cap.enable=false \
 vendor.audio.feature.hifi_audio.enable=true \
-vendor.audio.feature.hdmi_edid.enable=true  \
-endor.audio.feature.spkr_prot.enable=true  \
+vendor.audio.feature.hdmi_edid.enable=true \
 vendor.audio.feature.dsm_feedback.enable=false \
-vendor.audio.feature.ssrec.enable=true  \
+vendor.audio.feature.ssrec.enable=true \
 vendor.audio.feature.compr_voip.enable=true \
 vendor.audio.feature.kpi_optimize.enable=true \
-vendor.audio.feature.usb_offload.enable=false  \
+vendor.audio.feature.usb_offload.enable=false \
 vendor.audio.feature.usb_offload_burst_mode.enable=false \
 vendor.audio.feature.usb_offload_sidetone_volume.enable=false \
 vendor.audio.feature.src_trkn.enable=true \
@@ -102,10 +101,10 @@ ro.bluetooth.hfp.ver=1.7
 
 # Blur
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.surface_flinger.supports_background_blur=1
-    ro.sf.blurs_are_expensive=1 \
-    debug.sf.latch_unsignaled=1 \
-    debug.sf.disable_backpressure=1
+ro.surface_flinger.supports_background_blur=1 \
+ro.sf.blurs_are_expensive=1 \
+debug.sf.latch_unsignaled=1 \
+debug.sf.disable_backpressure=1
 
 # Boot
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -270,7 +269,6 @@ ro.telephony.default_network=22,22 \
 ro.telephony.use_old_mnc_mcc_format=true \
 service.qti.ims.enabled=1 \
 vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
-persist.vendor.radio.add_power_save=1
 
 # Radio (IMS)
 PRODUCT_PROPERTY_OVERRIDES += \
