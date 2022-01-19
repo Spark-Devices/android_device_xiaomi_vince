@@ -129,10 +129,6 @@ persist.vendor.camera.video.CDS=off
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.cne.feature=1
 
-# Coresight
-PRODUCT_PROPERTY_OVERRIDES += \
-persist.debug.coresight.config=stm-events
-
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
 debug.composition.type=c2d \
