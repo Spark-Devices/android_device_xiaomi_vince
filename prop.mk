@@ -184,10 +184,6 @@ persist.vendor.mwqem.enable=1
 PRODUCT_PROPERTY_OVERRIDES += \
 drm.service.enabled=true
 
-# Fast App Launch
-PRODUCT_PROPERTY_OVERRIDES += \
-persist.device_config.runtime_native.usap_pool_enabled=true
-
 # Fingerprint
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.qfp=false
