@@ -485,6 +485,10 @@ PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.msm8953 \
     android.hardware.usb.gadget@1.0.vendor:64
 
+# vndservicemanager
+PRODUCT_PACKAGES += \
+    vndservicemanager
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
