@@ -22,7 +22,6 @@ allow hal_fingerprint_default sysfs_leds:dir { read search };
 allow hal_fingerprint_default sysfs_leds:file { open read };
 allow hal_fingerprint_default sysfs_battery_supply:dir { read search };
 allow hal_fingerprint_default sysfs_battery_supply:file { open read };
-allow hal_fingerprint_default system_prop:property_service { set };
 allow hal_fingerprint_default vfat:dir { read search };
 allow hal_fingerprint_default vfat:file { getattr open read };
 
