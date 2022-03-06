@@ -33,6 +33,7 @@ $(call inherit-product, vendor/spark/config/common_full_phone.mk)
 # Spark flags
 WITH_GAPPS := true
 TARGET_BOOT_ANIMATION_RES := 720
+TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := true
 
 # Device identifier. This must come after all inclusions
