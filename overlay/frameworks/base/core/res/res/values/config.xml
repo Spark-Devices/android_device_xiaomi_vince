@@ -588,4 +588,7 @@
         <item>2</item> <!-- COLOR_MODE_SATURATED -->
         <item>3</item> <!-- COLOR_MODE_AUTOMATIC -->
     </integer-array>
+
+    <!-- Boolean indicating if placing the phone face down will result in a screen off. -->
+    <bool name="config_flipToScreenOffEnabled">false</bool>
 </resources>
