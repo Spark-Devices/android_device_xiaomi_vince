@@ -1,0 +1,8 @@
+[
+    {
+        "remote": "devices",
+        "repository": "android_vendor_xiaomi_vince",
+        "target_path": "vendor/xiaomi/vince",
+        "branch": "spark"
+    }
+]
