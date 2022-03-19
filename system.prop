@@ -22,3 +22,9 @@ ro.telephony.use_old_mnc_mcc_format=true
 # Set network mode to (T/L/G/W/1X/EVDO, T/L/G/W/1X/EVDO) for 7+7 mode device on DSDS mode
 #
 ro.telephony.default_network=22,22
+
+# Spark-OS
+ro.spark.device.name=Redmi 5 Plus
+ro.spark.group.url=https://t.me/anandhansprojects_chat
+ro.spark.maintainer=Anandhasayanan P
+ro.spark.maintainer.username=anandhan07x
