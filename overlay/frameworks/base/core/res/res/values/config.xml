@@ -637,4 +637,7 @@
          etc. dialogs. --> 
     <string name="config_appsNotReportingCrashes">com.google.android.tts</string>
 
+    <!-- Boolean indicating if placing the phone face down will result in a screen off. -->
+    <bool name="config_flipToScreenOffEnabled">false</bool>
+
 </resources>
