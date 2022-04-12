@@ -146,7 +146,6 @@ debug.renderengine.backend=skiaglthreaded \
 debug.mdpcomp.idletime=600 \
 debug.mdpcomp.logs=0 \
 debug.performance.tuning=1 \
-debug.sf.disable_backpressure=1 \
 debug.sf.disable_hwc=0 \
 debug.sf.enable_hwc_vds=0 \
 debug.sf.gpu_comp_tiling=1 \
