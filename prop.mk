@@ -156,7 +156,6 @@ debug.cpurend.vsync=false \
 debug.gralloc.enable_fb_ubwc=1 \
 debug.mdpcomp.idletime=600 \
 debug.mdpcomp.logs=0 \
-debug.sf.disable_backpressure=1 \
 debug.sf.disable_hwc=0 \
 debug.sf.enable_hwc_vds=1 \
 debug.sf.recomputecrop=0 \
