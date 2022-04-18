@@ -197,11 +197,6 @@ ro.fm.transmitter=false
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/config
 
-# Gboard
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.com.google.ime.kb_pad_port_b=1 \
-ro.com.google.ime.corner_key_r=35
-
 # Graphics
 PRODUCT_PRODUCT_PROPERTIES += \
 debug.hwui.renderer=skiagl \
@@ -218,18 +213,6 @@ ro.hardware.vulkan=adreno
 # Logging
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.control_privapp_permissions=log
-
-# LMKD
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.lmk.low=1001 \
-ro.lmk.medium=800 \
-ro.lmk.critical=0 \
-ro.lmk.critical_upgrade=false \
-ro.lmk.upgrade_pressure=100 \
-ro.lmk.downgrade_pressure=100 \
-ro.lmk.kill_heaviest_task=true \
-ro.lmk.kill_timeout_ms=100 \
-ro.lmk.use_minfree_levels=true
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
