@@ -287,6 +287,10 @@ persist.vendor.ims.disableDebugLogs=1 \
 persist.vendor.ims.disableSigHandler=1 \
 persist.vendor.ims.disableQXDMLogs=1
 
+# ScalarConfig
+PRODUCT_PRODUCT_PROPERTIES += \
+vendor.display.disable_scaler=1
+
 # SOC
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.soc.manufacturer=QTI \
