@@ -174,7 +174,7 @@ vendor.display.enable_default_color_mode=1 \
 vendor.gralloc.enable_fb_ubwc=1
 
 # DPM
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
 persist.vendor.dpm.feature=1 \
 persist.vendor.dpmhalservice.enable=1 \
 persist.vendor.dpm.loglevel=0 \
