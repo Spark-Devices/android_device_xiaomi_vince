@@ -28,3 +28,6 @@ allow hal_fingerprint_default vfat:file { getattr open read };
 allow hal_fingerprint_default gx_fpd_data_file:dir create_dir_perms;
 allow hal_fingerprint_default system_data_file:dir create_dir_perms;
 allow hal_fingerprint_default gx_fpd_data_file:file create_file_perms;
+
+# Allow fp to read boot status prop
+get_prop(hal_fingerprint_default, boot_status_prop)
