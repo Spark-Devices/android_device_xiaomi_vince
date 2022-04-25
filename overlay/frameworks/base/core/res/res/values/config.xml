@@ -625,4 +625,7 @@
 
     <!-- Screen off delay -->
     <integer name="config_screen_off_delay">0</integer>
+
+    <!-- If true, the display will be shifted around in ambient mode. -->
+    <bool name="config_enableBurnInProtection">true</bool>
 </resources>
