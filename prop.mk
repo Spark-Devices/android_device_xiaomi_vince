@@ -276,6 +276,7 @@ persist.vendor.radio.hw_mbn_update=0 \
 persist.vendor.radio.procedure_bytes=SKIP \
 persist.vendor.radio.rat_on=combine \
 persist.vendor.radio.sib16_support=1 \
+persist.vendor.radio.mt_sms_ack=30 \
 rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
 vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
 
