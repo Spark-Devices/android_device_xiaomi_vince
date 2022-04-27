@@ -1,5 +1,5 @@
-# zram
-r_dir_file(system_app sysfs_zram)
+# Aosp fm
+allow system_app fm_radio_device:chr_file { ioctl open read };
 
 # Battery Health
 allow system_app sysfs_battery_supply:dir { search };
@@ -8,3 +8,7 @@ allow system_app sysfs_battery_supply:file { open };
 allow system_app sysfs_battery_supply:file { getattr };
 
 binder_call(system_app, wificond)
+binder_call(system_app vold)
+
+# zram
+r_dir_file(system_app sysfs_zram)

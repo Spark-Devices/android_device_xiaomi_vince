@@ -1,5 +1,7 @@
 ro.alarm_boot                   u:object_r:vendor_alarm_boot_prop:s0
 persist.net.doxlat              u:object_r:vendor_xlat_prop:s0
+
+# Camera
 persist.vendor.camera.          u:object_r:camera_prop:s0
 persist.camera.                 u:object_r:camera_prop:s0
 cameradaemon.SaveMemAtBoot      u:object_r:camera_prop:s0
@@ -12,7 +14,13 @@ cpp.set.clock                   u:object_r:camera_prop:s0
 camera.cpp.dumppreviewpayload   u:object_r:camera_prop:s0
 disable.cpp.power.collapse      u:object_r:camera_prop:s0
 vendor.camera.                  u:object_r:camera_prop:s0
-wifi.active.interface           u:object_r:wifi_prop:s0
+
+# Fingerprint
 sys.fp.goodix                   u:object_r:vendor_fingerprint_prop:s0
 sys.fp.vendor                   u:object_r:vendor_fingerprint_prop:s0
 persist.sys.fp.                 u:object_r:vendor_fingerprint_prop:s0
+
+# Wi-Fi
+persist.sys.dynamic.nv          u:object_r:vendor_wifi_prop:s0
+vendor.wlan.                    u:object_r:vendor_wifi_prop:s0
+wifi.active.interface           u:object_r:vendor_wifi_prop:s0
