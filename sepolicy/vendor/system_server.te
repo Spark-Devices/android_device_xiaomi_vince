@@ -10,6 +10,7 @@ allow system_server exported_camera_prop:file { open read getattr };
 allow system_server camera_prop:file { open read getattr };
 allow system_server exported_camera_prop:file { read };
 allow system_server mm-qcamerad:binder { call };
+get_prop(system_server, camera_prop)
 
 # Touch Panel
 allow system_server proc_touchpanel:dir search;

@@ -10,3 +10,5 @@ allow mm-qcamerad sysfs_kgsl:lnk_file read;
 allow mm-qcamerad sysfs_kgsl:dir { search };
 allow mm-qcamerad system_server:unix_stream_socket { read write };
 allow mm-qcamerad vfat:dir { search };
+
+get_prop(mm-qcamerad, camera_prop)
