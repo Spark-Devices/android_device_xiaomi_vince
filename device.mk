@@ -23,12 +23,12 @@ PRODUCT_SHIPPING_API_LEVEL := 25
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
+# RRO (Runtime Resource Overlay)
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-PRODUCT_ENFORCE_RRO_TARGETS := \
-    framework-res
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
