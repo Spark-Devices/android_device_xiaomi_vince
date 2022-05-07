@@ -633,4 +633,8 @@
     <!-- Boolean indicating if placing the phone face down will result in a screen off. -->
     <bool name="config_flipToScreenOffEnabled">false</bool>
 
+    <!-- If true, the screen can be rotated via the accelerometer in all 4
+         rotations as the default behavior. -->
+    <bool name="config_allowAllRotations">true</bool>
+
 </resources>
