@@ -354,9 +354,8 @@ persist.vendor.delta_time.enable=true
 PRODUCT_PROPERTY_OVERRIDES += \
 net.tcp.2g_init_rwnd=10
 
-# Usb
-PRODUCT_PROPERTY_OVERRIDES += \
-persist.vendor.usb.config.extra=none \
+# Usb (RNDIS)
+PRODUCT_VENDOR_PROPERTIES += \
 vendor.usb.dpl.inst.name=dpl \
 vendor.usb.rmnet.func.name=rmnet_bam \
 vendor.usb.rmnet.inst.name=rmnet \
