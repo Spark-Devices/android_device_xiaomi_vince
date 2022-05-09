@@ -369,6 +369,10 @@ ro.hw_timeout_multiplier=3
 PRODUCT_PROPERTY_OVERRIDES += \
 wifi.interface=wlan0
 
+# Wifi Display (Platform)
+PRODUCT_SYSTEM_PROPERTIES += \
+media.wfd.max_resolution=7
+
 # ZRAM
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.zram.mark_idle_delay_mins=60 \
