@@ -80,7 +80,7 @@ function blob_fixup() {
 	case "${1}" in
 
 	product/lib64/libdpmframework.so)
-	    "${PATCHELF}" --add-needed libdpmframework_shim.so "${2}"
+	    "${PATCHELF}" --add-needed "libdpmframework_shim.so" "${2}"
 	;;
 	vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc)
 	    sed -i 's/fps_hal/vendor.fps_hal/' "${2}"
