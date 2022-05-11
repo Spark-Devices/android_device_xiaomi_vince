@@ -217,12 +217,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service-lazy \
-    android.hardware.drm@1.3-service-lazy.clearkey \
-    android.hardware.drm@1.4-service.clearkey \
-    android.hardware.drm@1.0.vendor \
-    android.hardware.drm@1.1.vendor \
-    android.hardware.drm@1.2.vendor \
-    android.hardware.drm@1.3.vendor
+    android.hardware.drm@1.3.vendor \
+    android.hardware.drm@1.4-service.clearkey
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -261,7 +257,6 @@ PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \
     android.hardware.gnss@1.0.vendor \
     android.hardware.gnss@1.1.vendor \
-    android.hardware.gnss@2.0.vendor \
     android.hardware.gnss@2.1.vendor
 
 # Hacks
@@ -357,7 +352,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0 \
     android.system.net.netd@1.0 \
-    android.system.net.netd@1.0.vendor \
     android.system.net.netd@1.1.vendor \
     libandroid_net
 
@@ -378,10 +372,8 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.perf@2.0.vendor \
-    vendor.qti.hardware.perf@2.1.vendor \
-    vendor.qti.hardware.perf@2.2.vendor \
-    android.hardware.power-service-qti
+    android.hardware.power-service-qti \
+    vendor.qti.hardware.perf@2.2.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml \
@@ -419,18 +411,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.radio.config@1.0 \
+    android.hardware.radio.config@1.0.vendor \
+    android.hardware.radio.config@1.2 \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio@1.2 \
-    android.hardware.radio@1.4 \
-    android.hardware.radio@1.0.vendor \
-    android.hardware.radio@1.1.vendor \
     android.hardware.radio@1.2.vendor \
-    android.hardware.radio@1.3.vendor \
-    android.hardware.radio@1.4.vendor \
+    android.hardware.radio@1.5 \
     android.hardware.radio@1.5.vendor \
-    android.hardware.secure_element@1.0 \
-    android.hardware.secure_element@1.0.vendor \
-    android.hardware.secure_element@1.1.vendor \
+    android.hardware.secure_element@1.2 \
     android.hardware.secure_element@1.2.vendor \
     librmnetctl \
     librmnetctl.vendor \
