@@ -239,29 +239,17 @@ vendor.vidc.enc.disable.pq=true \
 vendor.vidc.enc.disable_bframes=1 \
 vendor.video.disable.ubwc=1
 
-# Perf
-PRODUCT_VENDOR_PROPERTIES += \
-ro.vendor.perf.scroll_opt=true \
-ro.sys.fw.dex2oat_thread_count=8 \
-ro.vendor.extension_library=libqti-perfd-client.so
-
-# Netmgrd
+# Network manager daemon
 PRODUCT_VENDOR_PROPERTIES += \
 ro.vendor.use_data_netmgrd=true \
 persist.data.netmgrd.qos.enable=true \
 persist.vendor.data.mode=concurrent
 
-# Nitz
+# Perf
 PRODUCT_VENDOR_PROPERTIES += \
-persist.vendor.radio.nitz_plmn="" \
-persist.vendor.radio.nitz_lons_0="" \
-persist.vendor.radio.nitz_lons_1="" \
-persist.vendor.radio.nitz_lons_2="" \
-persist.vendor.radio.nitz_lons_3="" \
-persist.vendor.radio.nitz_sons_0="" \
-persist.vendor.radio.nitz_sons_1="" \
-persist.vendor.radio.nitz_sons_2="" \
-persist.vendor.radio.nitz_sons_3=""
+ro.vendor.perf.scroll_opt=true \
+ro.sys.fw.dex2oat_thread_count=8 \
+ro.vendor.extension_library=libqti-perfd-client.so
 
 # Qualcomm
 PRODUCT_VENDOR_PROPERTIES += \
@@ -269,33 +257,6 @@ ro.vendor.qti.va_aosp.support=1
 
 PRODUCT_ODM_PROPERTIES += \
 ro.vendor.qti.va_odm.support=1
-
-# Radio
-PRODUCT_VENDOR_PROPERTIES += \
-persist.radio.multisim.config=dsds \
-persist.vendor.radio.add_power_save=1 \
-persist.vendor.radio.apm_sim_not_pwdn=1 \
-persist.vendor.radio.custom_ecc=1 \
-persist.vendor.radio.hw_mbn_update=0 \
-persist.vendor.radio.procedure_bytes=SKIP \
-persist.vendor.radio.rat_on=combine \
-persist.vendor.radio.sib16_support=1 \
-persist.vendor.radio.mt_sms_ack=30 \
-rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
-vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
-
-# Radio (IMS)
-PRODUCT_VENDOR_PROPERTIES += \
-service.qti.ims.enabled=1 \
-persist.dbg.volte_avail_ovr=1 \
-persist.dbg.vt_avail_ovr=1 \
-persist.dbg.wfc_avail_ovr=1 \
-persist.vendor.ims.disableIMSLogs=1 \
-persist.vendor.ims.disableADBLogs=1 \
-persist.vendor.ims.disableDebugDataPathLogs=1 \
-persist.vendor.ims.disableDebugLogs=1 \
-persist.vendor.ims.disableSigHandler=1 \
-persist.vendor.ims.disableQXDMLogs=1
 
 # ScalerConfig
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -331,7 +292,7 @@ ro.surface_flinger.wcg_composition_dataspace=143261696
 PRODUCT_SYSTEM_PROPERTIES += \
 persist.sys.binary_xml=false
 
-# Telephony
+# Radio/Telephony
 PRODUCT_VENDOR_PROPERTIES += \
 DEVICE_PROVISIONED=1 \
 persist.rild.nitz_long_ons_0= \
@@ -343,12 +304,32 @@ persist.rild.nitz_short_ons_0= \
 persist.rild.nitz_short_ons_1= \
 persist.rild.nitz_short_ons_2= \
 persist.rild.nitz_short_ons_3= \
-rild.libargs=-d /dev/smd0 \
-rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
 ril.subscription.types=NV,RUIM \
-ro.telephony.call_ring.multiple=false \
 ro.telephony.default_network=22,22 \
-ro.telephony.use_old_mnc_mcc_format=true
+ro.telephony.call_ring.multiple=false \
+ro.telephony.use_old_mnc_mcc_format=true \
+persist.radio.multisim.config=dsds \
+service.qti.ims.enabled=1 \
+persist.dbg.volte_avail_ovr=1 \
+persist.dbg.vt_avail_ovr=1 \
+persist.dbg.wfc_avail_ovr=1 \
+persist.vendor.ims.disableIMSLogs=1 \
+persist.vendor.ims.disableADBLogs=1 \
+persist.vendor.ims.disableDebugDataPathLogs=1 \
+persist.vendor.ims.disableDebugLogs=1 \
+persist.vendor.ims.disableSigHandler=1 \
+persist.vendor.ims.disableQXDMLogs=1 \
+persist.vendor.radio.add_power_save=1 \
+persist.vendor.radio.apm_sim_not_pwdn=1 \
+persist.vendor.radio.custom_ecc=1 \
+persist.vendor.radio.hw_mbn_update=0 \
+persist.vendor.radio.procedure_bytes=SKIP \
+persist.vendor.radio.rat_on=combine \
+persist.vendor.radio.sib16_support=1 \
+persist.vendor.radio.mt_sms_ack=30 \
+rild.libargs=-d /dev/smd0 \
+rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
+vendor.rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 
 # Time Services
 PRODUCT_VENDOR_PROPERTIES += \
