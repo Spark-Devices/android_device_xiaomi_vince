@@ -37,7 +37,7 @@ on early-init
     mount tracefs tracefs /sys/kernel/tracing
     chmod 0755 /sys/kernel/tracing
 
-# Setup all the sub-system as related
+    # Setup all the sub-system as related
     write /sys/bus/msm_subsys/devices/subsys0/restart_level RELATED
     write /sys/bus/msm_subsys/devices/subsys1/restart_level RELATED
     write /sys/bus/msm_subsys/devices/subsys2/restart_level RELATED
@@ -245,7 +245,7 @@ on property:sys.boot_completed=1
     write /sys/block/dm-0/queue/read_ahead_kb 512
     write /sys/block/dm-1/queue/read_ahead_kb 512
 
-# Restrict permissions to socket file 
+    # Restrict permissions to socket file 
     # to hide Magisk & co.
     chmod 440 /proc/net/unix
     
@@ -362,8 +362,8 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
     disabled
     oneshot
 
-# FPS Info
-    on boot
+on boot
+    # FPS Info
     chown system graphics /sys/class/graphics/fb0/measured_fps
     chmod 0666 /sys/class/graphics/fb0/measured_fps
     
