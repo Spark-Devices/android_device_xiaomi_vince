@@ -488,7 +488,6 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_PACKAGES += \
     libgui_vendor \
-    com.android.vndk.current.on_vendor \
     libstdc++.vendor
 
 # VNDK protobuff
