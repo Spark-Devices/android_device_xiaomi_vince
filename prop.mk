@@ -120,10 +120,6 @@ ro.launcher.blur.appLaunch=0
 PRODUCT_VENDOR_PROPERTIES += \
 sys.vendor.shutdown.waittime=500
 
-# BPF
-PRODUCT_VENDOR_PROPERTIES += \
-ro.kernel.ebpf.supported=true
-
 # Camera
 PRODUCT_VENDOR_PROPERTIES += \
 persist.vendor.camera.display.lmax=1280x720 \
