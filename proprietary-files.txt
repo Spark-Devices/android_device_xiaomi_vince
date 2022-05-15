@@ -892,6 +892,9 @@ vendor/firmware/a506_zap.mdt|621df918f1d6ef0a0c3fe25c8f6a58d56af4b26a
 vendor/firmware/a530_pfp.fw|c19e1905c15622d7bb02409e6748959bceda9b08
 vendor/firmware/a530_pm4.fw|b1cf625b5552b99839687f479c124ac5daca2ca2
 
+# IRQ Balance - from LA.UM.9.6.2.r1-04200-89xx.0
+vendor/bin/msm_irqbalance|e5706bc0acab394b53fafdc1d7f342f69c6f5649
+
 # Keystore - from LA.UM.8.6.r1-04400-89xx.0
 vendor/lib/hw/keystore.msm8953.so|9d4ae263688bcf3f4555255ff2f243f9bdff2032
 vendor/lib64/hw/keystore.msm8953.so|265cd4d0246f5e2e80916dd1c96262be28306b31
@@ -955,7 +958,6 @@ vendor/lib64/vendor.qti.power.pasrmanager@1.0.so|7fca3c892a7e3c35fb0f3e7d6b9331a
 
 # Perf - from LA.UM.9.6.2.r1-04200-89xx.0
 vendor/bin/hw/vendor.qti.hardware.perf@2.2-service|8661609a6155d1ba635ab867a301455003971842
-vendor/bin/msm_irqbalance|c0910fb319bb8287f176f26078241299455baad0
 vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc|459b4c23550a56ac545f78c6d391f3d7dd9ba45b
 vendor/lib/libperfconfig.so|7a13d55a9f906a0336404fbb8e6efc8a4ec75cd0
 vendor/lib/libperfgluelayer.so|45f4ce6664541625983080bd9fbbc5c1c89ab0d8
