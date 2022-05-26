@@ -270,6 +270,13 @@ persist.vendor.radio.mt_sms_ack=30 \
 vendor.rild.libargs=-d[SPACE]/dev/smd0 \
 vendor.rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 
+# Recovery
+PRODUCT_SYSTEM_PROPERTIES += \
+persist.sys.recovery_update=false
+
+PRODUCT_VENDOR_PROPERTIES += \
+persist.vendor.recovery_update=false
+
 # SOC
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.soc.manufacturer=QTI \
