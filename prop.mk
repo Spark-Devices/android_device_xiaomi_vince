@@ -288,6 +288,13 @@ ro.surface_flinger.wcg_composition_dataspace=143261696
 PRODUCT_SYSTEM_PROPERTIES += \
 persist.sys.binary_xml=false
 
+# Recovery
+PRODUCT_SYSTEM_PROPERTIES += \
+persist.sys.recovery_update=false
+
+PRODUCT_VENDOR_PROPERTIES += \
+persist.vendor.recovery_update=false
+
 # Radio/Telephony
 PRODUCT_VENDOR_PROPERTIES += \
 DEVICE_PROVISIONED=1 \
