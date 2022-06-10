@@ -8,7 +8,4 @@
 <resources>
     <!-- Rounded display corners-->
     <dimen name="rounded_corner_radius">18dp</dimen>
-
-    <!-- Height of the status bar -->
-    <dimen name="status_bar_height">24dp</dimen>
 </resources>
