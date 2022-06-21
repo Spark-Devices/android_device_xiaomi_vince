@@ -261,7 +261,7 @@ vendor.display.disable_scaler=1
 # SOC
 PRODUCT_VENDOR_PROPERTIES += \
 ro.soc.manufacturer=QTI \
-ro.soc.model=MSM8953
+ro.soc.model=SDM450
 
 # SurfaceFlinger
 PRODUCT_VENDOR_PROPERTIES += \
