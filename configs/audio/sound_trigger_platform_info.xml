@@ -81,15 +81,6 @@
         <param max_ape_phrases="10" />
         <param max_ape_users="10" />
         <param event_timestamp_mode="false" />
-        <param sample_rate="16000" />
-        <param bit_width="16" />
-        <param channel_count="1"/>
-        <!-- adm_cfg_profile should match with the one defined under adm_config -->
-        <!-- Set it to NONE if LSM directly connects to AFE -->
-        <param adm_cfg_profile="NONE" />
-        <!-- fluence_type: "FLUENCE", "FLUENCE_DMIC", "FLUENCE_TMIC", -->
-        <!-- "FLUENCE_QMIC". param value is valid when adm_cfg_profile="FLUENCE"-->
-        <param fluence_type="NONE" />
 
         <!-- Module and param ids with which the algorithm is integrated in firmware -->
         <lsm_usecase>
@@ -143,7 +134,7 @@
         <param adm_cfg_profile="NONE" />
         <!-- fluence_type: "FLUENCE", FLUENCE_DMIC", FLUENCE_QMIC" -->
         <!-- param value is valid when profile type is fluence -->
-        <param fluence_type="FLUENCE_DMIC" />
+        <param fluence_type="FLUENCE_QMIC" />
     </sound_model_config>
 
     <!-- ARM based SVA sound_model_config -->
