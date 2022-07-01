@@ -82,6 +82,9 @@ function blob_fixup() {
 	product/lib64/libdpmframework.so)
 	    "${PATCHELF}" --add-needed "libdpmframework_shim.so" "${2}"
 	;;
+	system_ext/lib64/lib-imsvideocodec.so)
+        "${PATCHELF}" --add-needed "libims-shim.so" "${2}"
+	;;
 	vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc)
 	    sed -i 's/fps_hal/vendor.fps_hal/' "${2}"
 	    sed -i 's/group.*/& uhid/' "${2}"

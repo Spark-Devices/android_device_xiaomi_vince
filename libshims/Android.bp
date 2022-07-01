@@ -20,3 +20,11 @@ cc_library_shared {
     shared_libs: ["libui"],
     compile_multilib: "64",
 }
+
+cc_library_shared {
+    name: "libims-shim",
+    srcs: ["ims/libims-shim.cpp"],
+    shared_libs: ["libgui", "libstagefright", "libutils"],
+    compile_multilib: "64",
+    system_ext_specific: true
+}
