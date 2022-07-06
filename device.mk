@@ -287,9 +287,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
     ims-ext-common \
-    ims_ext_common.xml \
-    libui_shim \
-    libims-shim
+    ims_ext_common.xml
 
 # Inherit several Android Go Configurations(Beneficial for everyone, even on non-Go devices)
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
@@ -462,7 +460,9 @@ PRODUCT_COPY_FILES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libdpmframework_shim
+    libdpmframework_shim \
+    libmmcamera_ppeiscore_shim \
+    libims-shim
 
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \

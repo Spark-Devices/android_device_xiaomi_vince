@@ -79,7 +79,7 @@ extract "${MY_DIR}"/proprietary-files.txt "${SRC}" \
 function blob_fixup() {
 	case "${1}" in
 
-	product/lib64/libdpmframework.so)
+	system_ext/lib64/libdpmframework.so)
 	    "${PATCHELF}" --add-needed "libdpmframework_shim.so" "${2}"
 	;;
 	system_ext/lib64/lib-imsvideocodec.so)
@@ -93,7 +93,7 @@ function blob_fixup() {
 	    "${PATCHELF_0_8}" --remove-needed "libprotobuf-cpp-lite.so" "${2}"
 	;;
 	vendor/lib/libmmcamera_ppeiscore.so)
-	    "${PATCHELF}" --add-needed libmmcamera_ppeiscore_shim.so  "${DEVICE_BLOB_ROOT}"/vendor/lib/libmmcamera_ppeiscore.so
+	    "${PATCHELF}" --add-needed "libmmcamera_ppeiscore_shim.so" "${2}"
 	;;
 	vendor/lib/libmmcamera2_iface_modules.so)
 	    # Always set 0 (Off) as CDS mode in iface_util_set_cds_mode
