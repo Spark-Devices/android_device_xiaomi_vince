@@ -147,12 +147,6 @@ debug.renderengine.backend=skiaglthreaded \
 debug.mdpcomp.idletime=600 \
 debug.mdpcomp.logs=0 \
 debug.performance.tuning=1 \
-debug.sf.disable_hwc=0 \
-debug.sf.enable_hwc_vds=0 \
-debug.sf.gpu_comp_tiling=1 \
-debug.sf.hw=1 \
-debug.sf.latch_unsignaled=1 \
-debug.sf.recomputecrop=0 \
 dev.pm.dyn_samplingrate=1 \
 persist.demo.hdmirotationlock=false \
 persist.hwc.enable_vds=1 \
@@ -291,7 +285,13 @@ ro.soc.manufacturer=QTI \
 ro.soc.model=MSM8953
 
 # SurfaceFlinger
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_SYSTEM_PROPERTIES += \
+debug.sf.disable_hwc=0 \
+debug.sf.enable_hwc_vds=0 \
+debug.sf.gpu_comp_tiling=1 \
+debug.sf.hw=1 \
+debug.sf.latch_unsignaled=1 \
+debug.sf.recomputecrop=0 \
 debug.sf.use_phase_offsets_as_durations=1 \
 debug.sf.late.sf.duration=10500000 \
 debug.sf.late.app.duration=20500000 \
