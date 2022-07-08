@@ -155,10 +155,6 @@ debug.cpurend.vsync=false \
 debug.gralloc.enable_fb_ubwc=1 \
 debug.mdpcomp.idletime=600 \
 debug.mdpcomp.logs=0 \
-debug.sf.disable_hwc=0 \
-debug.sf.enable_hwc_vds=0 \
-debug.sf.latch_unsignaled=0 \
-debug.sf.recomputecrop=0 \
 dev.pm.dyn_samplingrate=1 \
 persist.demo.hdmirotationlock=false \
 persist.hwc.enable_vds=1 \
@@ -264,7 +260,11 @@ ro.soc.manufacturer=QTI \
 ro.soc.model=SDM450
 
 # SurfaceFlinger
-PRODUCT_VENDOR_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES += \
+debug.sf.disable_hwc=0 \
+debug.sf.enable_hwc_vds=0 \
+debug.sf.latch_unsignaled=0 \
+debug.sf.recomputecrop=0 \
 debug.sf.use_phase_offsets_as_durations=1 \
 debug.sf.late.sf.duration=10500000 \
 debug.sf.late.app.duration=20500000 \
