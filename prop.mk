@@ -202,7 +202,6 @@ debug.renderengine.backend=skiaglthreaded \
 debug.sdm.support_writeback=0 \
 debug.enable.sglscale=1 \
 debug.hwui.use_buffer_age=false \
-debug.sf.gpu_comp_tiling=1 \
 renderthread.skia.reduceopstasksplitting=true \
 ro.opengles.version=196610 \
 ro.hardware.egl=adreno \
