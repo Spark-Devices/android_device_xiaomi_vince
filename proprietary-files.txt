@@ -46,7 +46,7 @@ vendor/lib/soundfx/libqcbassboost.so|aee797870096234f1237c6b99819cfceb1a80ecc
 vendor/lib/soundfx/libqcreverb.so|cd884a46419329933c81096ad1eeba46bc0b8a70
 vendor/lib/soundfx/libqcvirt.so|3ed80ebc51ab6c2a56d4e9c29bf119d201a47e65
 
-# Audio ACDB - from vince
+# Audio ACDB - from tissot
 vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb|71d06907c9fe8c123d6390a4478fce02868d0ff6
 vendor/etc/acdbdata/QRD/QRD_General_cal.acdb|d2bdb61a06db632f2f15bda7a90334ae51624ded
 vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb|8128588f77afc8fc9b1d7f3a64e83b18b110b22c
@@ -54,7 +54,8 @@ vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb|be4871b20fd45fc8ac5edaf8c19643b78ee
 vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb|7e7d37c292a2b081eaa8b6c0ea88f3bb834a0cf4
 vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb|cd739f7132b585ee95afab2db168a2c3f353875c
 vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb|8bec81e255420fdee9507081dd12779dd27c2b78
-vendor/etc/acdbdata/adsp_avs_config.acdb|ac0616af3b2d4f070c0e54c18126a877e528621b
+vendor/etc/acdbdata/QRD/QRD_adsp_avs_config.acdb|6291d5e7457a962d9ba7bc0b3a33392abfe2cb27
+vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp|459945f20430c615cff67f2b4433f45f173f7455
 
 # Audio firmware - from vince
 etc/firmware/tas2557_uCDSP.bin:vendor/firmware/tas2557_uCDSP.bin|b8005b3aa2cb2340ababf3cc75777a1fe14becc6
