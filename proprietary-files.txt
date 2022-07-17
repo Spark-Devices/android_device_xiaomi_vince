@@ -952,14 +952,6 @@ vendor/lib64/libvpplibrary.so|30e8e7cf1495fb88162beeb65e6273f28563b43b
 # Novatek touchscreen firmware - from vince
 etc/firmware/novatek_ts_fw.bin:vendor/firmware/novatek_ts_fw.bin|12f7299c9148dbacf960bd8d835ddfca8f882a8e
 
-# Pasrmanager - from LA.UM.9.6.2.r1-03600-89xx.0
-vendor/lib/vendor.qti.memory.pasrmanager@1.0.so|57701075833781eddea0601251a7fa04f3efc7c8
-vendor/lib/vendor.qti.memory.pasrmanager@1.1.so|233a907ff9e752a4e1537e55a03d802df52bb5b2
-vendor/lib/vendor.qti.power.pasrmanager@1.0.so|b5520550ea7377461dbcd87a578bb09198d94669
-vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so|312e78edd420c0c75f2138eb630018341c8edf69
-vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so|a78d02e872c5d7b81b70ea7001bd4aae1107754e
-vendor/lib64/vendor.qti.power.pasrmanager@1.0.so|7fca3c892a7e3c35fb0f3e7d6b9331a93aee3d5c
-
 # Perf - from LA.UM.8.6.2.r1-08400-89xx.0
 vendor/bin/energy-awareness|056792da4f0bcfc34b1f85e3ee67820d8c80627f
 vendor/bin/msm_irqbalance|0e967f5c7eaf8d863a50996459101be47adf96a2
