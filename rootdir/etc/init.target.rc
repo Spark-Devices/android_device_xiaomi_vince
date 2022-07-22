@@ -42,17 +42,6 @@ on fs
     restorecon_recursive /mnt/vendor/persist
 
 on init
-    setprop ro.vendor.hw.dualsim ${ro.boot.dualsim}
-    setprop ro.vendor.hw.device ${ro.boot.device}
-    setprop ro.vendor.hw.radio ${ro.boot.radio}
-
-on property:ro.vendor.hw.dualsim=true
-    setprop persist.radio.multisim.config dsds
-
-on property:ro.vendor.hw.dualsim=false
-    setprop persist.radio.multisim.config ""
-
-on init
     write /dev/stune/foreground/schedtune.sched_boost_no_override 1
     write /dev/stune/top-app/schedtune.sched_boost_no_override 1
     write /dev/stune/schedtune.colocate 0
@@ -78,27 +67,24 @@ on post-fs-data
     mkdir /data/vendor/camera 0770 camera camera
     mkdir /data/misc/camera 0770 camera camera
 
-#start camera server as daemon
+# start camera server as daemon
 service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
-    writepid /dev/cpuset/system-background/tasks
 
-#Start up peripheral manager
+# Start up peripheral manager
 service vendor.per_mgr /vendor/bin/pm-service
     class core
     user system
     group system net_raw
     ioprio rt 4
-    writepid /dev/cpuset/system-background/tasks
 
 service vendor.per_proxy /vendor/bin/pm-proxy
     class core
     user system
     group system
     disabled
-    writepid /dev/cpuset/system-background/tasks
 
 on property:init.svc.vendor.per_mgr=running
     start vendor.per_proxy
@@ -111,7 +97,6 @@ service vendor.qseecomd /vendor/bin/qseecomd
    class core
    user root
    group root
-   writepid /dev/cpuset/system-background/tasks
 
 service thermal-engine /vendor/bin/thermal-engine
    class main
@@ -121,7 +106,6 @@ service thermal-engine /vendor/bin/thermal-engine
    socket thermal-recv-passive-client stream 0666 system system
    socket thermal-send-rule stream 0660 system system
    group root
-   writepid /dev/cpuset/system-background/tasks
 
 service wcnss-service /vendor/bin/wcnss_service
     class main
