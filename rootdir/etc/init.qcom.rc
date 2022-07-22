@@ -364,3 +364,9 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
     
 on property:hw.fm.init=*
     write /sys/module/radio_iris_transport/parameters/fmsmd_set ${hw.fm.init}
+
+on property:persist.radio.airplane_mode_on=1
+    stop vendor.qcrild
+    stop vendor.qcrild2
+    start vendor.qcrild
+    start vendor.qcrild2
