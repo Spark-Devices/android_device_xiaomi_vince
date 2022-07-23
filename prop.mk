@@ -207,6 +207,13 @@ ro.opengles.version=196610 \
 ro.hardware.egl=adreno \
 ro.hardware.vulkan=adreno
 
+# IORapd
+PRODUCT_SYSTEM_PROPERTIES += \
+ro.iorapd.enable=false \
+iorapd.perfetto.enable=false \
+iorapd.readahead.enable=false \
+persist.device_config.runtime_native_boot.iorap_readahead_enable=false
+
 # Logging
 PRODUCT_VENDOR_PROPERTIES += \
 ro.control_privapp_permissions=log
