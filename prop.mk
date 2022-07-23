@@ -194,6 +194,13 @@ ro.frp.pst=/dev/block/bootdevice/by-name/config
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.com.google.ime.kb_pad_port_b=1
 
+# IORapd
+PRODUCT_SYSTEM_PROPERTIES += \
+ro.iorapd.enable=false \
+iorapd.perfetto.enable=false \
+iorapd.readahead.enable=false \
+persist.device_config.runtime_native_boot.iorap_readahead_enable=false
+
 # Logging
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.control_privapp_permissions=log
