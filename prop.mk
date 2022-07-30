@@ -365,12 +365,6 @@ wifi.interface=wlan0
 PRODUCT_SYSTEM_PROPERTIES += \
 media.wfd.max_resolution=7
 
-# ZRAM
-PRODUCT_SYSTEM_PROPERTIES += \
-ro.zram.mark_idle_delay_mins=60 \
-ro.zram.first_wb_delay_mins=1440 \
-ro.zram.periodic_wb_delay_hours=24
-
 # Enable QC2 bufferqueue block-pool
 PRODUCT_VENDOR_PROPERTIES += \
 vendor.qc2.use.bqpool=1
