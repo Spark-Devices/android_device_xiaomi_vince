@@ -196,12 +196,11 @@ ro.frp.pst=/dev/block/bootdevice/by-name/config
 
 # Graphics
 PRODUCT_PRODUCT_PROPERTIES += \
-debug.hwui.renderer=skiagl \
-debug.renderengine.backend=skiaglthreaded \
+debug.hwui.renderer=opengl \
+debug.renderengine.backend=threaded \
 debug.sdm.support_writeback=0 \
 debug.enable.sglscale=1 \
 debug.hwui.use_buffer_age=false \
-renderthread.skia.reduceopstasksplitting=true \
 ro.opengles.version=196610 \
 ro.hardware.egl=adreno \
 ro.hardware.vulkan=adreno
