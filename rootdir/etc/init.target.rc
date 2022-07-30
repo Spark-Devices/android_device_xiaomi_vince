@@ -238,3 +238,4 @@ service goodix_script /vendor/bin/init.goodix.sh
 on property:sys.boot_completed=1
     # Enable ZRAM
     swapon_all /vendor/etc/fstab.qcom
+    write /proc/sys/vm/swappiness 60
