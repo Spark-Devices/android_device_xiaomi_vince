@@ -37,7 +37,6 @@ persist.vendor.audio.fluence.voicecomm=true \
 persist.vendor.audio.hw.binder.size_kbyte=1024 \
 persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive \
 ro.config.media_vol_steps=20 \
-ro.config.vc_call_vol_steps=6 \
 ro.vendor.audio.sdk.fluencetype=fluence \
 ro.vendor.audio.sdk.ssr=false \
 vendor.audio.flac.sw.decoder.24bit=true \
