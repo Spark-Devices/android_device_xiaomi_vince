@@ -14,15 +14,6 @@ dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
 dalvik.vm.image-dex2oat-filter=quicken \
 dalvik.vm.image-dex2oat-threads=8 
 
-# Dalvik
-PRODUCT_VENDOR_PROPERTIES += \
-dalvik.vm.heapstartsize=16m \
-dalvik.vm.heapgrowthlimit=256m \
-dalvik.vm.heapsize=512m \
-dalvik.vm.heaptargetutilization=0.75 \
-dalvik.vm.heapminfree=512k \
-dalvik.vm.heapmaxfree=8m
-
 # Audio
 PRODUCT_VENDOR_PROPERTIES += \
 af.fast_track_multiplier=2 \
