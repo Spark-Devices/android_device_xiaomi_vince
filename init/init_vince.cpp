@@ -36,8 +36,11 @@
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
-char const *heaptargetutilization;
+char const *heapstartsize;
 char const *heapgrowthlimit;
+char const *heapsize;
+char const *heaptargetutilization;
+char const *heapminfree;
 char const *heapmaxfree;
 
 void check_device()
@@ -47,12 +50,18 @@ void check_device()
     sysinfo(&sys);
 
     if (sys.totalram > 3072ull * 1024 * 1024) {
-        heaptargetutilization = "0.6";
+        heapstartsize = "8m";
         heapgrowthlimit = "256m";
+        heapsize = "512m";
+        heaptargetutilization = "0.6";
+        heapminfree = "512k";
         heapmaxfree = "16m";
     } else {
-        heaptargetutilization = "0.75";
+        heapstartsize = "8m";
         heapgrowthlimit = "192m";
+        heapsize = "512m";
+        heaptargetutilization = "0.75";
+        heapminfree = "512k";
         heapmaxfree = "8m";
     }
 }
@@ -72,10 +81,10 @@ void vendor_load_properties()
 {
     check_device();
 
-    property_override("dalvik.vm.heapstartsize", "8m");
+    property_override("dalvik.vm.heapstartsize", heapstartsize);
     property_override("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
-    property_override("dalvik.vm.heapsize", "512m");
+    property_override("dalvik.vm.heapsize", heapsize);
     property_override("dalvik.vm.heaptargetutilization", heaptargetutilization);
-    property_override("dalvik.vm.heapminfree", "512k");
+    property_override("dalvik.vm.heapminfree", heapminfree);
     property_override("dalvik.vm.heapmaxfree", heapmaxfree);
 }
