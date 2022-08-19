@@ -313,6 +313,7 @@ debug.sf.gpu_comp_tiling=1 \
 debug.sf.hw=1 \
 debug.sf.auto_latch_unsignaled=true \
 debug.sf.recomputecrop=0 \
+debug.sf.disable_client_composition_cache=1 \
 debug.sf.use_phase_offsets_as_durations=1 \
 debug.sf.late.sf.duration=10500000 \
 debug.sf.late.app.duration=20500000 \
