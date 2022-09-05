@@ -41,11 +41,6 @@ vendor/lib64/libadiertac.so|98a8c2702d4e203689e4a80c69c4b1cf93af1567
 vendor/lib64/libaudcal.so|213bdd87ec3339042796f62605e38690e2500fd6
 vendor/lib64/libaudioalsa.so|534d4dc07fecea0611273c745721b1ed2015a3a3
 
-# Audio (soundfx) - from LA.UM.9.6.2.r1-04200-89xx.0
-vendor/lib/soundfx/libqcbassboost.so|aee797870096234f1237c6b99819cfceb1a80ecc
-vendor/lib/soundfx/libqcreverb.so|cd884a46419329933c81096ad1eeba46bc0b8a70
-vendor/lib/soundfx/libqcvirt.so|3ed80ebc51ab6c2a56d4e9c29bf119d201a47e65
-
 # Audio ACDB - from vince & ysl
 vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb|125334957d26dedf34cc0a98a176d30d16b2fe6c
 vendor/etc/acdbdata/QRD/QRD_General_cal.acdb|de1e189edc138c85906c86879ba631f8c048c599
