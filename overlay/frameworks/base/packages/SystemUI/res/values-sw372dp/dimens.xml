@@ -18,9 +18,6 @@
 <resources>
     <dimen name="nav_content_padding">0dp</dimen>
 
-    <!-- more realistic padding -->
-    <dimen name="rounded_corner_content_padding">6dp</dimen>
-
     <!-- the padding on the start of the statusbar -->
     <dimen name="status_bar_padding_start">5dp</dimen>
 
