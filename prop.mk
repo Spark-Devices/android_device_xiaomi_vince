@@ -319,3 +319,7 @@ ro.hw_timeout_multiplier=3
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
 wifi.interface=wlan0
+
+# Wifi Display (Platform)
+PRODUCT_PROPERTY_OVERRIDES += \
+media.wfd.max_resolution=5
