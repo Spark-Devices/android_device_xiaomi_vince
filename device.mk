@@ -144,10 +144,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
     bt_stack.conf
 
-# Bluetooth
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sysconfig/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
-
 # Cgroup and task_profiles
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/cgroups.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
