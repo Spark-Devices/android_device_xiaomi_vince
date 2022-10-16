@@ -270,6 +270,13 @@ ifeq ($(strip $(AUDIO_FEATURE_NO_AUDIO_OUT)),true)
   LOCAL_CFLAGS += -DNO_AUDIO_OUT
 endif
 
+#  NonLA feature
+ifeq ($(strip $(AUDIO_FEATURE_ENABLED_EXT_HDMI)),true)
+    LOCAL_CFLAGS += -DAUDIO_EXTERNAL_HDMI_ENABLED
+    LOCAL_C_INCLUDES += $(TARGET_OUT_HEADERS)/mm-audio/audio-parsers
+    LOCAL_SHARED_LIBRARIES += libaudioparsers
+endif
+
 # Hardware specific feature
 ifeq ($(strip $(BOARD_SUPPORTS_SOUND_TRIGGER)),true)
     ST_FEATURE_ENABLE := true
@@ -352,6 +359,11 @@ ifeq ($(strip $(AUDIO_FEATURE_ENABLED_AHAL_EXT)),true)
     LOCAL_SHARED_LIBRARIES += vendor.qti.hardware.audiohalext@1.0
 endif
 
+ifeq ($(strip $(AUDIO_FEATURE_ELLIPTIC_ULTRASOUND_SUPPORT)),true)
+    LOCAL_CFLAGS += -DELLIPTIC_ULTRASOUND_ENABLED
+    LOCAL_SRC_FILES += audio_extn/ultrasound.c
+endif
+
 LOCAL_CFLAGS += -D_GNU_SOURCE
 LOCAL_CFLAGS += -Wall -Werror
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)
@@ -363,18 +375,10 @@ ifeq ($(strip $(AUDIO_FEATURE_ENABLED_GCOV)),true)
 endif
 
 LOCAL_SHARED_LIBRARIES += libbase libhidlbase libutils android.hardware.power@1.2 liblog
-
-LOCAL_SHARED_LIBRARIES += android.hardware.power-ndk_platform
-LOCAL_SHARED_LIBRARIES += libbinder_ndk
-
 LOCAL_SRC_FILES += audio_perf.cpp
 
 ifeq ($(strip $(AUDIO_FEATURE_ENABLED_FM_TUNER_EXT)),true)
     LOCAL_CFLAGS += -DFM_TUNER_EXT_ENABLED
-endif
-
-ifneq ($(QCPATH),)
-    PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)/adsprpcd
 endif
 
 LOCAL_MODULE := audio.primary.$(TARGET_BOARD_PLATFORM)
