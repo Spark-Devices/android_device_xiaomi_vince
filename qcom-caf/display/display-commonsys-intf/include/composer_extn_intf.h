@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2019-2020, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -32,6 +32,8 @@
 
 #include <dlfcn.h>
 #include "frame_scheduler_intf.h"
+#include "display_extn_intf.h"
+#include "phase_offset_extn_intf.h"
 
 #define COMPOSER_EXTN_REV_MAJOR (1)
 #define COMPOSER_EXTN_REV_MINOR (0)
@@ -44,6 +46,10 @@ class ComposerExtnIntf {
  public:
   virtual int CreateFrameScheduler(FrameSchedulerIntf **intf) = 0;
   virtual void DestroyFrameScheduler(FrameSchedulerIntf *intf) = 0;
+  virtual int CreateDisplayExtn(DisplayExtnIntf **intf) = 0;
+  virtual void DestroyDisplayExtn(DisplayExtnIntf *intf) = 0;
+  virtual int CreatePhaseOffsetExtn(PhaseOffsetExtnIntf **intf) = 0;
+  virtual void DestroyPhaseOffsetExtn(PhaseOffsetExtnIntf *intf) = 0;
  protected:
   virtual ~ComposerExtnIntf() { }
 };

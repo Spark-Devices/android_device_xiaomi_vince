@@ -1,17 +1,17 @@
 /*
- * Copyright (c) 2019, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2020, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
  * met:
  *     * Redistributions of source code must retain the above copyright
- *      notice, this list of conditions and the following disclaimer.
+ *       notice, this list of conditions and the following disclaimer.
  *     * Redistributions in binary form must reproduce the above
  *       copyright notice, this list of conditions and the following
  *       disclaimer in the documentation and/or other materials provided
- *      with the distribution.
+ *       with the distribution.
  *     * Neither the name of The Linux Foundation nor the names of its
- *      contributors may be used to endorse or promote products derived
+ *       contributors may be used to endorse or promote products derived
  *       from this software without specific prior written permission.
  *
  * THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
@@ -27,34 +27,23 @@
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef __LAYER_EXTN_INTF_H__
-#define __LAYER_EXTN_INTF_H__
+#ifndef __PHASE_OFFSET_EXTN_INTF_H__
+#define __PHASE_OFFSET_EXTN_INTF_H__
 
-#include <sys/types.h>
+#include <unordered_map>
 
-#include <vector>
-#include <string>
+#define PHASE_OFFSET_EXTN 1
 
 namespace composer {
 
-#define LAYER_EXTN_LIBRARY_NAME "liblayerext.qti.so"
-#define CREATE_LAYER_EXTN_INTERFACE "CreateLayerExtnInterface"
-#define DESTROY_LAYER_EXTN_INTERFACE "DestroyLayerExtnInterface"
-
-#define LAYER_EXTN_REVISION_MAJOR (1)
-#define LAYER_EXTN_REVISION_MINOR (0)
-#define LAYER_EXTN_VERSION_TAG ((uint16_t) ((LAYER_EXTN_REVISION_MAJOR << 8) \
-                                          | LAYER_EXTN_REVISION_MINOR))
-
-class LayerExtnIntf {
+class PhaseOffsetExtnIntf {
  public:
-  virtual ~LayerExtnIntf() = default;
-  virtual int GetLayerClass(const std::string &name) = 0;
-};
+  virtual int GetAdvancedSfOffsets(std::unordered_map<float, int64_t> *advancedSfOffsets) = 0;
 
-typedef bool (*CreateLayerExtnInterface)(uint16_t version, LayerExtnIntf **interface);
-typedef void (*DestroyLayerExtnInterface)(LayerExtnIntf *interface);
+ protected:
+  virtual ~PhaseOffsetExtnIntf() { }
+};
 
 }  // namespace composer
 
-#endif  // __LAYER_EXTN_INTF_H__
+#endif  // __PHASE_OFFSET_EXTN_INTF_H__
