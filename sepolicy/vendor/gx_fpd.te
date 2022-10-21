@@ -35,3 +35,7 @@ allow gx_fpd storage_file:lnk_file read;
 allow gx_fpd media_rw_data_file:dir { open read search };
 allow gx_fpd mnt_user_file:dir search;
 allow gx_fpd mnt_user_file:lnk_file read;
+
+# Allow read/write property
+get_prop(gx_fpd, vendor_fp_prop)
+set_prop(gx_fpd, vendor_fp_prop)

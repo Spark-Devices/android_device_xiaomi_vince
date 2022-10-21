@@ -3,7 +3,6 @@ typeattribute hal_fingerprint_default data_between_core_and_vendor_violators;
 type_transition hal_fingerprint_default system_data_file:{ dir file } gx_fpd_data_file;
 add_service(hal_fingerprint_default, goodix_fingerprint_vndservice);
 r_dir_file(hal_fingerprint_default, firmware_file);
-set_prop(hal_fingerprint_default, fingerprint_prop);
 vndbinder_use(hal_fingerprint_default);
 
 allow hal_fingerprint_default gx_fpd_device:chr_file rw_file_perms;
@@ -28,3 +27,6 @@ allow hal_fingerprint_default vfat:file { getattr open read };
 allow hal_fingerprint_default gx_fpd_data_file:dir create_dir_perms;
 allow hal_fingerprint_default system_data_file:dir create_dir_perms;
 allow hal_fingerprint_default gx_fpd_data_file:file create_file_perms;
+
+# Allow read/write property
+set_prop(hal_fingerprint_default, vendor_fp_prop)
