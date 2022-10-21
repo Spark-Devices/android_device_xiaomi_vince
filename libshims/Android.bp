@@ -1,5 +1,5 @@
 cc_library_shared {
-    name: "libmmcamera_ppeiscore_shim",
+    name: "libui_shim",
     srcs: ["mmcamera/GraphicBuffer.cpp"],
     shared_libs: ["libui"],
     compile_multilib: "32",
@@ -12,11 +12,4 @@ cc_library_shared {
     shared_libs: ["liblog", "libbase"],
     compile_multilib: "64",
     system_ext_specific: true
-}
-
-cc_library_shared {
-    name: "libui_shim",
-    srcs: ["ims/GraphicBuffer.cpp"],
-    shared_libs: ["libui"],
-    compile_multilib: "64",
 }

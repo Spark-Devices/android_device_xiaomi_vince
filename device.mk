@@ -454,8 +454,7 @@ PRODUCT_COPY_FILES += \
 # Shims
 PRODUCT_PACKAGES += \
     libui_shim \
-    libdpmframework_shim \
-    libmmcamera_ppeiscore_shim
+    libdpmframework_shim
 
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \

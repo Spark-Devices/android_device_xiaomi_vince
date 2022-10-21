@@ -90,7 +90,7 @@ function blob_fixup() {
 	    "${PATCHELF_0_8}" --remove-needed "libprotobuf-cpp-lite.so" "${2}"
 	;;
 	vendor/lib/libmmcamera_ppeiscore.so)
-	    "${PATCHELF}" --add-needed "libmmcamera_ppeiscore_shim.so" "${2}"
+	    "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
 	;;
 	vendor/lib/libmmcamera2_iface_modules.so)
 	    # Always set 0 (Off) as CDS mode in iface_util_set_cds_mode
