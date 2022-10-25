@@ -194,7 +194,11 @@ PRODUCT_PACKAGES += \
     libvulkan \
     liboverlay \
     libqdMetaData.system \
-    libgenlock
+    libgenlock \
+    libgralloc.system.qti \
+    vendor.display.config@1.0.vendor \
+    vendor.display.config@2.0.vendor \
+    vendor.qti.hardware.display.mapper@2.0.vendor
 
 # DRM
 PRODUCT_PACKAGES += \
