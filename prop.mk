@@ -339,6 +339,12 @@ persist.vendor.delta_time.enable=true
 PRODUCT_PROPERTY_OVERRIDES += \
 net.tcp.2g_init_rwnd=10
 
+# USB
+PRODUCT_PROPERTY_OVERRIDES += \
+vendor.usb.rmnet.func.name=rmnet_bam \
+vendor.usb.rmnet.inst.name=rmnet \
+vendor.usb.rndis.func.name=rndis_bam
+
 # Watchdog
 PRODUCT_SYSTEM_PROPERTIES += \
 ro.hw_timeout_multiplier=3
