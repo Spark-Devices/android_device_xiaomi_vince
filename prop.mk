@@ -346,3 +346,7 @@ wifi.interface=wlan0
 # Wifi Display (Platform)
 PRODUCT_PROPERTY_OVERRIDES += \
 media.wfd.max_resolution=5
+
+# Zygote
+PRODUCT_PROPERTY_OVERRIDES += \
+zygote.critical_window.minute=10
