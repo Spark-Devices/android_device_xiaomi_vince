@@ -110,13 +110,26 @@
     </acdb_ids>
 
     <backend_names>
+        <device name="SND_DEVICE_OUT_SPEAKER" backend="speaker"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" backend="speaker"/>
+        <device name="SND_DEVICE_OUT_VOICE_SPEAKER" backend="speaker"/>
+        <device name="SND_DEVICE_OUT_VOIP_SPEAKER" backend="speaker"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES" backend="speaker-and-headphones"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_LINE" backend="speaker-and-headphones"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_SCO" backend="speaker-and-bt-sco"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_SCO_WB" backend="speaker-and-bt-sco-wb"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_WSA_AND_BT_SCO" backend="wsa-speaker-and-bt-sco"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_WSA_AND_BT_SCO_WB" backend="wsa-speaker-and-bt-sco-wb"/>
+    </backend_names>
+
+    <backend_names>
         <device name="SND_DEVICE_OUT_HEADPHONES" interface="PRI_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_BT_SCO_WB" interface="INT_BT_SCO_RX"/>
         <device name="SND_DEVICE_OUT_BT_SCO" interface="INT_BT_SCO_RX"/>
         <device name="SND_DEVICE_OUT_LINE" interface="PRI_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_ANC_HEADSET" interface="PRI_MI2S_RX"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES" backend="speaker-and-headphones" interface="PRI_MI2S_RX"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_AND_LINE" backend="speaker-and-headphones" interface="PRI_MI2S_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES" interface="PRI_MI2S_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_LINE" interface="PRI_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_ANC_HEADSET" interface="PRI_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_HEADPHONES" interface="PRI_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_ANC_HEADSET" interface="PRI_MI2S_RX"/>
@@ -124,16 +137,16 @@
         <device name="SND_DEVICE_OUT_VOICE_TTY_FULL_HEADPHONES" interface="PRI_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_TTY_VCO_HEADPHONES" interface="PRI_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_HANDSET" interface="PRI_MI2S_RX"/>
-        <device name="SND_DEVICE_OUT_SPEAKER" backend="speaker" interface="PRI_MI2S_RX"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" backend="speaker" interface="PRI_MI2S_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER" interface="PRI_MI2S_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" interface="PRI_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_VBAT" interface="PRI_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_HANDSET" interface="PRI_MI2S_RX"/>
-        <device name="SND_DEVICE_OUT_VOICE_SPEAKER" backend="speaker" interface="PRI_MI2S_RX"/>
+        <device name="SND_DEVICE_OUT_VOICE_SPEAKER" interface="PRI_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER_VBAT" interface="PRI_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER_2" interface="PRI_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER_2_VBAT" interface="PRI_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_TTY_HCO_HANDSET" interface="PRI_MI2S_RX"/>
-        <device name="SND_DEVICE_OUT_VOIP_SPEAKER" backend="speaker" interface="PRI_MI2S_RX"/>
+        <device name="SND_DEVICE_OUT_VOIP_SPEAKER" interface="PRI_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_ANC_FB_HEADSET" interface="PRI_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_ANC_FB_HEADSET" interface="PRI_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_ANC_HANDSET" interface="PRI_MI2S_RX"/>
@@ -206,10 +219,10 @@
         <device name="SND_DEVICE_IN_UNPROCESSED_HEADSET_MIC" interface="TERT_MI2S_TX"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER_AND_VOICE_HEADPHONES" interface="PRI_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER_AND_VOICE_ANC_HEADSET" interface="PRI_MI2S_RX"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_SCO" backend="speaker-and-bt-sco" interface="PRI_MI2S_RX-and-INT_BT_SCO_RX"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_SCO_WB" backend="speaker-and-bt-sco-wb" interface="PRI_MI2S_RX-and-INT_BT_SCO_RX"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_WSA_AND_BT_SCO" backend="wsa-speaker-and-bt-sco" interface="PRI_MI2S_RX-and-INT_BT_SCO_RX"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_WSA_AND_BT_SCO_WB" backend="wsa-speaker-and-bt-sco-wb" interface="PRI_MI2S_RX-and-INT_BT_SCO_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_SCO" interface="PRI_MI2S_RX-and-INT_BT_SCO_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_SCO_WB" interface="PRI_MI2S_RX-and-INT_BT_SCO_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_WSA_AND_BT_SCO" interface="PRI_MI2S_RX-and-INT_BT_SCO_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_WSA_AND_BT_SCO_WB" interface="PRI_MI2S_RX-and-INT_BT_SCO_RX"/>
     </backend_names>
     <device_names>
         <device name="SND_DEVICE_IN_CAMCORDER_MIC" alias="handset-stereo-dmic-ef"/>
