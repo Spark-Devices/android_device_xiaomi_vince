@@ -550,7 +550,8 @@
         <item>"/vendor/lib64/libllvm-glnext.so"</item>
         <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
         <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
-        <item>"/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
+        <item>"/system_ext/priv-app/SystemUIGoogle/SystemUIGoogle.apk"</item>
+        <item>"/system_ext/priv-app/SystemUIGoogle/oat/arm64/SystemUIGoogle.odex"</item>
     </string-array>
 
     <!-- Number of physical SIM slots on the device. This includes both eSIM and pSIM slots, and
