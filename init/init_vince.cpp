@@ -98,4 +98,8 @@ void vendor_load_properties()
     property_override("dalvik.vm.heapminfree", heapminfree);
     property_override("dalvik.vm.heapmaxfree", heapmaxfree);
     set_avoid_gfxaccel_config();
+
+    // Set default bluetooth device name
+    property_override("bluetooth.device.default_name", "Redmi 5 Plus");
+
 }
