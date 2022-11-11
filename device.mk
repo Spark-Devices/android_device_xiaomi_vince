@@ -436,6 +436,9 @@ PRODUCT_PACKAGES += \
     libui_shim \
     libdpmframework_shim
 
+# Speed profile services and wifi-service to reduce RAM and storage
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
