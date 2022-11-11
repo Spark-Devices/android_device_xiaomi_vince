@@ -180,7 +180,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     android.hardware.memtrack@1.0-impl \
@@ -191,9 +190,7 @@ PRODUCT_PACKAGES += \
     memtrack.msm8953 \
     libdisplayconfig \
     libvulkan \
-    liboverlay \
     libqdMetaData.system \
-    libgenlock \
     libgralloc.system.qti \
     vendor.display.config@1.0.vendor \
     vendor.display.config@2.0.vendor \
@@ -342,7 +339,6 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxG711Enc \
     libOmxQcelp13Enc \
-    libOmxSwVencHevc \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw
@@ -405,7 +401,6 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2.vendor \
     librmnetctl \
     librmnetctl.vendor \
-    libcnefeatureconfig \
     libxml2 \
     extphonelib \
     extphonelib-product \
