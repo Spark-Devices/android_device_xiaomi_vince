@@ -174,6 +174,7 @@ persist.hwc.mdpcomp.enable=true \
 persist.hwc.ptor.enable=true \
 ro.opengles.version=196610 \
 ro.qualcomm.cabl=0 \
+ro.config.avoid_gfx_accel=true \
 ro.vendor.display.cabl=2 \
 sdm.debug.disable_skip_validate=1 \
 vendor.display.disable_skip_validate=1 \
