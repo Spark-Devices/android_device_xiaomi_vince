@@ -385,4 +385,5 @@ persist.log.tag.QC-time-services=S \
 persist.log.tag.OMXNodeInstance=S \
 persist.log.tag.BoundBrokerSvc=S \
 persist.log.tag.MediaDataManager=S \
-persist.log.tag.SoLoader=S
+persist.log.tag.SoLoader=S \
+persist.log.tag.RefreshRateConfigs=S
