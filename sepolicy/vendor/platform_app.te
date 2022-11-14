@@ -2,4 +2,9 @@ allow platform_app system_app_data_file:dir getattr;
 allow platform_app sysfs_fps:file { getattr open read };
 allow platform_app sysfs_graphics:dir search;
 
+# System Info
+allow platform_app sysfs_battery_supply:dir search;
+allow platform_app sysfs_battery_supply:file r_file_perms;
+allow platform_app sysfs_kgsl:file r_file_perms;
+
 get_prop(platform_app, camera_prop)
