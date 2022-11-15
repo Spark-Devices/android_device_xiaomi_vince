@@ -242,7 +242,8 @@ vendor.video.disable.ubwc=1
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.sys.fw.dex2oat_thread_count=8 \
-ro.vendor.extension_library=libqti-perfd-client.so
+ro.vendor.extension_library=libqti-perfd-client.so \
+ro.vendor.perf.scroll_opt=true
 
 # Network manager daemon
 PRODUCT_PROPERTY_OVERRIDES += \
