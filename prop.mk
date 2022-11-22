@@ -369,7 +369,8 @@ media.wfd.max_resolution=5
 PRODUCT_PROPERTY_OVERRIDES += \
 zygote.critical_window.minute=10
 
-# Suppress several logspams on all builds
+ifeq ($(TARGET_BUILD_VARIANT),user)
+# Suppress several logspams on user builds
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.log.tag.GoogleInputMethodService=S \
 persist.log.tag.Diag_Lib=S \
@@ -387,3 +388,4 @@ persist.log.tag.BoundBrokerSvc=S \
 persist.log.tag.MediaDataManager=S \
 persist.log.tag.SoLoader=S \
 persist.log.tag.RefreshRateConfigs=S
+endif
