@@ -387,5 +387,9 @@ persist.log.tag.OMXNodeInstance=S \
 persist.log.tag.BoundBrokerSvc=S \
 persist.log.tag.MediaDataManager=S \
 persist.log.tag.SoLoader=S \
-persist.log.tag.RefreshRateConfigs=S
+persist.log.tag.RefreshRateConfigs=S \
+persist.log.tag.droid.launcher3=S \
+persist.log.tag.Binder=S \
+persist.log.tag.Resources=S \
+persist.log.tag.ResourcesCompat=S
 endif
