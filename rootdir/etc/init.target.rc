@@ -190,6 +190,9 @@ on boot
 # access permission for wlan
     chown system system /mnt/vendor/persist/WCNSS_qcom_wlan_nv.bin
 
+    # default country code
+    setprop ro.boot.wificountrycode 00
+
     # USB controller configuration
     write /sys/module/g_android/parameters/mtp_tx_req_len 131072
     write /sys/module/g_android/parameters/mtp_rx_req_len 131072
