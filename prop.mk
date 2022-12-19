@@ -312,6 +312,7 @@ ro.soc.model=MSM8953
 
 # SurfaceFlinger
 PRODUCT_SYSTEM_PROPERTIES += \
+debug.sf.disable_backpressure=1 \
 debug.sf.disable_hwc=0 \
 debug.sf.enable_hwc_vds=0 \
 debug.sf.gpu_comp_tiling=1 \
