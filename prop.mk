@@ -322,6 +322,7 @@ debug.sf.hw=1 \
 debug.sf.auto_latch_unsignaled=true \
 debug.sf.recomputecrop=0 \
 debug.sf.enable_transaction_tracing=false \
+debug.sf.predict_hwc_composition_strategy=0 \
 debug.sf.use_phase_offsets_as_durations=1 \
 debug.sf.late.sf.duration=13000000 \
 debug.sf.late.app.duration=25500000 \
