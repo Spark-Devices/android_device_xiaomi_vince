@@ -3,7 +3,7 @@
 #
 
 # ART
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
 dalvik.vm.boot-dex2oat-threads=8 \
 dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
@@ -15,7 +15,7 @@ dalvik.vm.image-dex2oat-filter=quicken \
 dalvik.vm.image-dex2oat-threads=8 
 
 # Audio
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 af.fast_track_multiplier=2 \
 audio.deep_buffer.media=true \
 audio.offload.disable=true \
@@ -50,7 +50,7 @@ vendor.voice.record.conc.disabled=false \
 vendor.voice.voip.conc.disabled=true
 
 # Audio dynamic feature flags
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 vendor.audio.feature.snd_mon.enable=true \
 vendor.audio.feature.compr_cap.enable=false \
 vendor.audio.feature.hifi_audio.enable=true \
@@ -93,7 +93,7 @@ vendor.audio.feature.multi_voice_session.enable=true \
 vendor.audio.feature.incall_music.enable=true
 
 # Bluetooth
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 persist.vendor.service.bdroid.sibs=false \
 vendor.qcom.bluetooth.soc=smd \
 ro.bluetooth.hfp.ver=1.7
@@ -122,11 +122,11 @@ PRODUCT_PRODUCT_PROPERTIES += \
 persist.sys.sf.disable_blurs=1
 
 # Boot
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 sys.vendor.shutdown.waittime=500
 
 # Camera
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 persist.vendor.camera.display.lmax=1280x720 \
 persist.vendor.camera.display.umax=1920x1080 \
 vendor.camera.lowpower.record.enable=1 \
@@ -150,11 +150,11 @@ ro.charger.disable_init_blank=true \
 ro.charger.enable_suspend=true
 
 # Cne
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 persist.vendor.cne.feature=1
 
-# Display
-PRODUCT_PROPERTY_OVERRIDES += \
+# Display/Graphics
+PRODUCT_VENDOR_PROPERTIES += \
 debug.composition.type=c2d \
 debug.cpurend.vsync=false \
 debug.egl.hw=1 \
@@ -191,23 +191,23 @@ persist.vendor.dpm.loglevel=0 \
 persist.vendor.mwqem.enable=1
 
 # DRM
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 drm.service.enabled=true
 
 # Fingerprint
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 persist.qfp=false
 
 # Fm
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 ro.fm.transmitter=false
 
 # Frp
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/config
 
 # Gboard
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 ro.com.google.ime.kb_pad_port_b=1
 
 # IORapd
@@ -218,11 +218,11 @@ iorapd.readahead.enable=false \
 persist.device_config.runtime_native_boot.iorap_readahead_enable=false
 
 # Logging
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 ro.control_privapp_permissions=log
 
 # Media
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 av.debug.disable.pers.cache=1 \
 debug.stagefright.omx_default_rank=0 \
 media.msm8956hw=0 \
@@ -240,28 +240,30 @@ vendor.vidc.enc.disable_bframes=1 \
 vendor.video.disable.ubwc=1
 
 # Perf
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 ro.sys.fw.dex2oat_thread_count=8 \
 ro.vendor.extension_library=libqti-perfd-client.so \
 ro.vendor.perf.scroll_opt=true
 
 # Network manager daemon
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 ro.vendor.use_data_netmgrd=true \
 persist.data.netmgrd.qos.enable=true \
 persist.vendor.data.mode=concurrent
 
 # Phantom process monitoring
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_SYSTEM_PROPERTIES += \
 sys.fflag.override.settings_enable_monitor_phantom_procs=false
 
 # Qualcomm
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.vendor.qti.va_aosp.support=1 \
+PRODUCT_VENDOR_PROPERTIES += \
+ro.vendor.qti.va_aosp.support=1
+
+PRODUCT_ODM_PROPERTIES += \
 ro.vendor.qti.va_odm.support=1
 
 # Radio/Telephony
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 DEVICE_PROVISIONED=1 \
 persist.rild.nitz_long_ons_0= \
 persist.rild.nitz_long_ons_1= \
@@ -306,7 +308,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 persist.vendor.recovery_update=false
 
 # SOC
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 ro.soc.manufacturer=QTI \
 ro.soc.model=MSM8953
 
@@ -337,19 +339,19 @@ ro.surface_flinger.set_idle_timer_ms=9000 \
 ro.surface_flinger.wcg_composition_dataspace=143261696
 
 # System
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 persist.sys.binary_xml=false
 
 # Time Services
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 persist.vendor.delta_time.enable=true
 
 # Tcp
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 net.tcp.2g_init_rwnd=10
 
 # USB
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 vendor.usb.rmnet.func.name=rmnet_bam \
 vendor.usb.rmnet.inst.name=rmnet \
 vendor.usb.rndis.func.name=rndis_bam
@@ -359,20 +361,20 @@ PRODUCT_SYSTEM_PROPERTIES += \
 ro.hw_timeout_multiplier=3
 
 # Wifi
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 wifi.interface=wlan0
 
 # Wifi Display (Platform)
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 media.wfd.max_resolution=5
 
 # Zygote
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 zygote.critical_window.minute=10
 
 ifeq ($(TARGET_BUILD_VARIANT),user)
 # Suppress several logspams on user builds
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 persist.log.tag.GoogleInputMethodService=S \
 persist.log.tag.Diag_Lib=S \
 persist.log.tag.Tethering=S \
