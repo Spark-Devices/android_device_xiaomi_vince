@@ -232,7 +232,6 @@ media.stagefright.audio.sink=280 \
 media.stagefright.thumbnail.prefer_hw_codecs=true \
 mmp.enable.3g2=true \
 vendor.audio.hw.aac.encoder=true \
-vendor.mm.enable.qcom_parser=1048575 \
 vendor.vidc.debug.level=0 \
 vendor.vidc.dec.downscalar_height=1088 \
 vendor.vidc.dec.downscalar_width=1920 \
@@ -240,6 +239,10 @@ vendor.vidc.disable.split.mode=1 \
 vendor.vidc.enc.disable.pq=true \
 vendor.vidc.enc.disable_bframes=1 \
 vendor.video.disable.ubwc=1
+
+# codecs:(PARSER_)AAC AC3 AMR_NB AMR_WB ASF DTS FLV 3GP 3G2 MKV MP2PS MP2TS MP3 OGG QCP WAV FLAC AIFF APE
+PRODUCT_VENDOR_PROPERTIES += \
+vendor.mm.enable.qcom_parser=1048543
 
 # Perf
 PRODUCT_VENDOR_PROPERTIES += \
