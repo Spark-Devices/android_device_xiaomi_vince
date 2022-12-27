@@ -266,7 +266,6 @@ ro.vendor.qti.va_odm.support=1
 
 # Radio/Telephony
 PRODUCT_VENDOR_PROPERTIES += \
-DEVICE_PROVISIONED=1 \
 ril.subscription.types=NV,RUIM \
 ro.telephony.default_network=22,22 \
 ro.telephony.call_ring.multiple=false \
