@@ -26,10 +26,6 @@ persist.vendor.audio.fluence.speaker=true \
 persist.vendor.audio.fluence.voicecall=true \
 persist.vendor.audio.fluence.voicerec=false \
 persist.vendor.audio.hw.binder.size_kbyte=1024 \
-ro.config.media_vol_steps=20 \
-ro.config.vc_call_vol_steps=6 \
-ro.vendor.audio.sdk.fluencetype=fluence \
-ro.vendor.audio.sdk.ssr=false \
 vendor.audio.flac.sw.decoder.24bit=true \
 vendor.audio.hal.boot.timeout.ms=20000 \
 vendor.audio.offload.buffer.size.kb=256 \
@@ -48,7 +44,11 @@ vendor.voice.conc.fallbackpath=deep-buffer \
 vendor.voice.path.for.pcm.voip=false \
 vendor.voice.playback.conc.disabled=true \
 vendor.voice.record.conc.disabled=false \
-vendor.voice.voip.conc.disabled=true
+vendor.voice.voip.conc.disabled=true \
+ro.config.media_vol_steps=20 \
+ro.config.vc_call_vol_steps=6 \
+ro.vendor.audio.sdk.fluencetype=fluence \
+ro.vendor.audio.sdk.ssr=false
 
 # Audio dynamic feature flags
 PRODUCT_VENDOR_PROPERTIES += \
@@ -123,7 +123,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 persist.sys.sf.disable_blurs=1
 
 # Boot
-PRODUCT_VENDOR_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES += \
 sys.vendor.shutdown.waittime=500
 
 # Camera
@@ -201,17 +201,13 @@ drm.service.enabled=true
 PRODUCT_VENDOR_PROPERTIES += \
 persist.qfp=false
 
-# Fm
-PRODUCT_VENDOR_PROPERTIES += \
+# FM
+PRODUCT_SYSTEM_PROPERTIES += \
 ro.fm.transmitter=false
 
 # Frp
-PRODUCT_VENDOR_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/config
-
-# Gboard
-PRODUCT_VENDOR_PROPERTIES += \
-ro.com.google.ime.kb_pad_port_b=1
 
 # IORapd
 PRODUCT_SYSTEM_PROPERTIES += \
@@ -221,7 +217,7 @@ iorapd.readahead.enable=false \
 persist.device_config.runtime_native_boot.iorap_readahead_enable=false
 
 # Logging
-PRODUCT_VENDOR_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES += \
 ro.control_privapp_permissions=log
 
 # Media
@@ -270,15 +266,10 @@ ro.vendor.qti.va_odm.support=1
 
 # Radio/Telephony
 PRODUCT_VENDOR_PROPERTIES += \
-ril.subscription.types=NV,RUIM \
-ro.telephony.default_network=22,22 \
-ro.telephony.call_ring.multiple=false \
-ro.telephony.use_old_mnc_mcc_format=true \
-persist.radio.multisim.config=dsds \
-service.qti.ims.enabled=1 \
 persist.dbg.volte_avail_ovr=1 \
 persist.dbg.vt_avail_ovr=1 \
 persist.dbg.wfc_avail_ovr=1 \
+persist.radio.multisim.config=dsds \
 persist.vendor.ims.disableIMSLogs=1 \
 persist.vendor.ims.disableADBLogs=1 \
 persist.vendor.ims.disableDebugDataPathLogs=1 \
@@ -292,7 +283,12 @@ persist.vendor.radio.hw_mbn_update=0 \
 persist.vendor.radio.procedure_bytes=SKIP \
 persist.vendor.radio.rat_on=combine \
 persist.vendor.radio.sib16_support=1 \
-persist.vendor.radio.mt_sms_ack=30
+persist.vendor.radio.mt_sms_ack=30 \
+ro.telephony.default_network=22,22 \
+ro.telephony.call_ring.multiple=false \
+ro.telephony.use_old_mnc_mcc_format=true \
+ril.subscription.types=NV,RUIM \
+service.qti.ims.enabled=1
 
 # Recovery
 PRODUCT_SYSTEM_PROPERTIES += \
@@ -308,6 +304,13 @@ ro.soc.model=MSM8953
 
 # SurfaceFlinger
 PRODUCT_SYSTEM_PROPERTIES += \
+debug.sf.use_phase_offsets_as_durations=1 \
+debug.sf.late.sf.duration=13000000 \
+debug.sf.late.app.duration=25500000 \
+debug.sf.early.sf.duration=15500000 \
+debug.sf.early.app.duration=6000000 \
+debug.sf.earlyGl.sf.duration=10500000 \
+debug.sf.earlyGl.app.duration=9500000 \
 debug.sf.disable_backpressure=1 \
 debug.sf.disable_hwc=0 \
 debug.sf.enable_hwc_vds=0 \
@@ -317,13 +320,6 @@ debug.sf.auto_latch_unsignaled=true \
 debug.sf.recomputecrop=0 \
 debug.sf.enable_transaction_tracing=false \
 debug.sf.predict_hwc_composition_strategy=0 \
-debug.sf.use_phase_offsets_as_durations=1 \
-debug.sf.late.sf.duration=13000000 \
-debug.sf.late.app.duration=25500000 \
-debug.sf.early.sf.duration=15500000 \
-debug.sf.early.app.duration=6000000 \
-debug.sf.earlyGl.sf.duration=10500000 \
-debug.sf.earlyGl.app.duration=9500000 \
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
 ro.surface_flinger.max_virtual_display_dimension=4096 \
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
@@ -335,7 +331,7 @@ ro.surface_flinger.set_idle_timer_ms=1000 \
 ro.surface_flinger.wcg_composition_dataspace=143261696
 
 # System
-PRODUCT_VENDOR_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES += \
 persist.sys.binary_xml=false
 
 # Time Services
@@ -343,7 +339,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 persist.vendor.delta_time.enable=true
 
 # Tcp
-PRODUCT_VENDOR_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES += \
 net.tcp.2g_init_rwnd=10
 
 # USB
@@ -361,11 +357,11 @@ PRODUCT_VENDOR_PROPERTIES += \
 wifi.interface=wlan0
 
 # Wifi Display (Platform)
-PRODUCT_VENDOR_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES += \
 media.wfd.max_resolution=5
 
 # Zygote
-PRODUCT_VENDOR_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES += \
 zygote.critical_window.minute=10
 
 ifeq ($(TARGET_BUILD_VARIANT),user)
