@@ -267,6 +267,7 @@ persist.dbg.volte_avail_ovr=1 \
 persist.dbg.vt_avail_ovr=1 \
 persist.dbg.wfc_avail_ovr=1 \
 persist.radio.multisim.config=dsds \
+persist.vendor.data.iwlan.enable=true \
 persist.vendor.ims.disableIMSLogs=1 \
 persist.vendor.ims.disableADBLogs=1 \
 persist.vendor.ims.disableDebugDataPathLogs=1 \
