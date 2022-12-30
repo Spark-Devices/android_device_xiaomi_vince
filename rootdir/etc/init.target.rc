@@ -213,6 +213,9 @@ on boot
     # add for goodix 
     chown system system /dev/goodix_fp
     chmod 0644 /dev/goodix_fp
+
+    # Disable surfaceflinger prime_shader
+    setprop service.sf.prime_shader_cache 0
     
     # add for fpc 
     chown system system /sys/devices/platform/soc/soc:fpc1020/compatible_all
@@ -247,3 +250,6 @@ on property:sys.boot_completed=1
     # Enable ZRAM
     swapon_all /vendor/etc/fstab.qcom
     write /proc/sys/vm/swappiness 60
+
+    # Enable surfaceflinger prime_shader
+    setprop service.sf.prime_shader_cache 1
