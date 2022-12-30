@@ -42,6 +42,12 @@
     <!-- Boolean indicating whether the wifi chipset has 5GHz frequency band support -->
     <bool translatable="false" name="config_wifi5ghzSupport">true</bool>
 
+    <!-- Enable ACS (auto channel selection) for Wifi hotspot (SAP) -->
+    <bool translatable="false" name="config_wifi_softap_acs_supported">false</bool>
+
+    <!-- Enable 802.11ac for Wifi hotspot (SAP) -->
+    <bool translatable="false" name="config_wifi_softap_ieee80211ac_supported">true</bool>
+
     <!-- Indicates that a full bugreport should be triggered when wifi diagnostics detects an error on non-user (i.e debug) builds -->
     <bool translatable="false" name="config_wifi_diagnostics_bugreport_enabled">true</bool>
 
