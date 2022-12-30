@@ -426,6 +426,7 @@ subsystem mem_buf_vm
 /sys/class/graphics/fb*     hdcp2p2/min_level_change 0660    system  graphics
 /sys/class/graphics/fb*     hdmi_audio_cb            0600    audioserver audio
 /sys/class/graphics/fb*     lineptr_value            0664    system  graphics
+/sys/class/drm/sde-crtc-*   lineptr_value            0664    system  graphics
 /sys/class/graphics/fb*     msm_fb_persist_mode      0664    system  graphics
 /sys/class/graphics/fb0     idle_time                0664    system  graphics
 /sys/class/graphics/fb0     dynamic_fps              0664    system  graphics
