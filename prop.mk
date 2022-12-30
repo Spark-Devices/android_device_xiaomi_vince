@@ -156,7 +156,6 @@ persist.vendor.cne.feature=1
 
 # Display/Graphics
 PRODUCT_VENDOR_PROPERTIES += \
-debug.composition.type=c2d \
 debug.cpurend.vsync=false \
 debug.egl.hw=1 \
 debug.enable.sglscale=1 \
@@ -164,8 +163,6 @@ debug.hwui.use_buffer_age=false \
 debug.gralloc.enable_fb_ubwc=1 \
 debug.hwui.renderer=skiagl \
 debug.hwui.skia_atrace_enabled=false \
-debug.renderengine.backend=skiaglthreaded \
-debug.mdpcomp.idletime=600 \
 debug.mdpcomp.logs=0 \
 debug.performance.tuning=1 \
 dev.pm.dyn_samplingrate=1 \
@@ -314,7 +311,6 @@ debug.sf.earlyGl.app.duration=9500000 \
 debug.sf.disable_backpressure=1 \
 debug.sf.disable_hwc=0 \
 debug.sf.enable_hwc_vds=0 \
-debug.sf.gpu_comp_tiling=1 \
 debug.sf.hw=1 \
 debug.sf.auto_latch_unsignaled=true \
 debug.sf.recomputecrop=0 \
