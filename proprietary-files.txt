@@ -41,7 +41,7 @@ vendor/lib64/libadiertac.so|98a8c2702d4e203689e4a80c69c4b1cf93af1567
 vendor/lib64/libaudcal.so|213bdd87ec3339042796f62605e38690e2500fd6
 vendor/lib64/libaudioalsa.so|534d4dc07fecea0611273c745721b1ed2015a3a3
 
-# Audio ACDB - from tissot
+# Audio ACDB (QRD) - from tissot
 vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb|71d06907c9fe8c123d6390a4478fce02868d0ff6
 vendor/etc/acdbdata/QRD/QRD_General_cal.acdb|d2bdb61a06db632f2f15bda7a90334ae51624ded
 vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb|8128588f77afc8fc9b1d7f3a64e83b18b110b22c
@@ -49,32 +49,28 @@ vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb|be4871b20fd45fc8ac5edaf8c19643b78ee
 vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb|7e7d37c292a2b081eaa8b6c0ea88f3bb834a0cf4
 vendor/etc/acdbdata/adsp_avs_config.acdb|ac0616af3b2d4f070c0e54c18126a877e528621b
 
-# Audio ACDB - from ysl
+# Audio ACDB (MTP) - from ysl
 vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb|fe0160756c94ff41c1669e82e3a8ef8e82841db7
 vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb|648159a5a7cd7760a512f27a226741336ebabc9e
 
 # Audio firmware - from vince
 etc/firmware/tas2557_uCDSP.bin:vendor/firmware/tas2557_uCDSP.bin|b8005b3aa2cb2340ababf3cc75777a1fe14becc6
 
-# Bluetooth (BTConfigstore) - from LA.UM.9.6.2.r1-04200-89xx.0
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|2c5480b33615179e1a8a67bf93e190e8647c68b4
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|0abafcc0c404b67bb0d87128a87cc9deabe54935
-
-# Bluetooth (QTI Service) - from LA.UM.9.6.2.r1-04200-89xx.0
+# Bluetooth - from LA.UM.9.6.2.r1-04200-89xx.0
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|2401640a10df4de23f704b87c4adab2da9ed111d
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|f4ee3b2da2b08647447869ade86ec63f7340accc
-
-# Bluetooth (Audio) - from LA.UM.9.6.2.r1-04200-89xx.0
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|20627ee95c176ee124140dd5101f3232f74f3014
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|a97a6c330c932176acee0bce820c6e737778aed4
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|2c5480b33615179e1a8a67bf93e190e8647c68b4
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|0abafcc0c404b67bb0d87128a87cc9deabe54935
 vendor/lib64/libbt-hidlclient.so|1491414e874419d2df1529c511bd48e348cf53a8
 vendor/lib64/libbtnv.so|07e031527e60ce5e62a5017fd1d7ff83ef1aafcf
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|3281b131bf921fbdc00afe66cf2a0493a86b97a0
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|5de4a802667afa2c05b9c75ae6311fcd0c8b23f6
 
 # Bluetooth (aptX) - from Crosshatch - 11/RQ2A.210405.006/7214111
-system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
+system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
 # Camera - from vince
 lib/libtrueportrait.so:vendor/lib/libtrueportrait.so|b8e11c098bd859aae6c535cdb87e3e36f6b1c6ef
@@ -861,10 +857,6 @@ vendor/lib64/libllvm-glnext.so|f7721fe7d3a2e0dad300608d24c1cf90b6624e1f
 vendor/lib64/libllvm-qcom.so|e6b6abd9abfefaeff79e61b4eee1b0c6054aaa4e
 vendor/lib64/libscalar.so|c2b4383fe9d506cad9062f60ab97b0ef64acacfb
 
-# Graphics (tinyxml) - from LA.UM.9.6.2.r1-04100-89xx.0
-vendor/lib/libtinyxml.so|1303bce85570b6de6f6e60a3edff508afe3fc60f
-vendor/lib64/libtinyxml.so|e00e92ead90d45240484c159dfe20f29c9cd5b64
-
 # Graphics (SDM) - from LA.UM.10.6.2.r1-01600-89xx.0
 vendor/bin/hw/vendor.display.color@1.0-service|1f1d5cba21378c81f1c23c78d987d06c7613b794
 vendor/bin/mm-pp-dpps|083a05570aa6ec8c36e92a1294e34ca420b89437
@@ -897,6 +889,10 @@ vendor/lib64/vendor.display.postproc@1.0.so|6ed50478f3b6c4ff6871ce715b9944c5e8a4
 system_ext/lib64/libgralloc.qti.so|8d5f08f480c121eab46bc64e3d6a8c9913a4c9f2
 system_ext/lib64/libqdMetaData.so|9092b482aa50935b9dc008b79a2ee8305869bd6c
 
+# Graphics (tinyxml) - from LA.UM.9.6.2.r1-04100-89xx.0
+vendor/lib/libtinyxml.so|1303bce85570b6de6f6e60a3edff508afe3fc60f
+vendor/lib64/libtinyxml.so|e00e92ead90d45240484c159dfe20f29c9cd5b64
+
 # Graphics firmware - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/firmware/a506_zap.b00|c45a7b34456844f5deb73e2dce79cbfcfb9ae71c
 vendor/firmware/a506_zap.b01|374b5c4a2212b2636d5dfc2deda66b56b6bf2d03
@@ -909,7 +905,7 @@ vendor/firmware/a530_pm4.fw|b1cf625b5552b99839687f479c124ac5daca2ca2
 vendor/lib/hw/keystore.msm8953.so|9d4ae263688bcf3f4555255ff2f243f9bdff2032
 vendor/lib64/hw/keystore.msm8953.so|265cd4d0246f5e2e80916dd1c96262be28306b31
 
-# Latency - from LA.UM.9.6.2.r1-04400-89xx.0
+# Latency - from LA.UM.9.6.2.r1-03600-89xx.0
 system_ext/lib/vendor.qti.hardware.data.latency@1.0.so|9262fa105be0652305b410b40860206d67e93451
 system_ext/lib/vendor.qti.latency@2.0.so|26dc93762a947b411f7d3378bf99fda88d1b111b
 system_ext/lib64/vendor.qti.hardware.data.latency@1.0.so|aa438c4d062e018d39604db1955da36205a8c953
@@ -926,16 +922,15 @@ vendor/lib/libsmwrapper.so|f0ee761c02c888e77d947bb87d162d9379bc1530
 # Media - from LA.UM.9.6.2.r1-04200-89xx.0
 lib/libFileMux.so|4e05cd5e9913311ad17543d204adcd6d60cc8754
 lib/libOmxMux.so|1f861cbf34f5e885fb4f9637b4aab53a3c59691b
+system_ext/lib/extractors/libmmparserextractor.so|5135a95473e887749100c7f84f5f659630c80193
 system_ext/lib/libavenhancements.so|248d6cf0db255fb2cf5e077e7127f510036f7ec0
 system_ext/lib/libmmosal.so|8c7f0a071f84ec2ac9522bf448cb902a3ece2405
 system_ext/lib/libmmparser_lite.so|18cf2b71e517e651e35b931261f0c63783813ff6
-system_ext/lib/extractors/libmmparserextractor.so|5135a95473e887749100c7f84f5f659630c80193
 system_ext/lib64/libavenhancements.so|642292eeef580a33fec54b4505c1b6cecffde5a3
 system_ext/lib64/libmmosal.so|ef19a38be8283c87eabe96f74bc8a71881ab1f0a
 vendor/etc/seccomp_policy/mediacodec.policy|3dec19ed56099a36b44cc72ad04ab23b9cc22ace
 vendor/etc/seccomp_policy/mediaextractor.policy|4234a844e9b1aef37397c8cfbd19566966ecd622
 vendor/lib/libFlacSwDec.so|7d661ac115de794bc6f6f7d20d4f93735b698c52
-vendor/lib/libmmosal.so|e23d6d1b2a035c08ffd7ac72d5241ebff37f0d14
 vendor/lib/libOmxAacDec.so|a91955e53b84f99ef9d19caf43d88b2b7fee9f27
 vendor/lib/libOmxAmrDec.so|d2493a69c2f1d34ce7a423ca2b2fed6ad9f515e9
 vendor/lib/libOmxAmrwbplusDec.so|dcaa7e19311d33b9fc8467faa7af44047679a78c
@@ -948,6 +943,7 @@ vendor/lib/libOmxQcelp13Dec.so|e05e83f66b0126040aa9a6145e78e7a51d053f21
 vendor/lib/libOmxVideoDSMode.so|c51fc2b34b6607f4238bfdf54e9c58da6ef8e2ce
 vendor/lib/libOmxVpp.so|74143b04b31c57e01c24a3da6cd4fd84d7da7829
 vendor/lib/libOmxWmaDec.so|bc2a4a87b538ccd6004d6269a42bbef9a84ad7c4
+vendor/lib/libmmosal.so|e23d6d1b2a035c08ffd7ac72d5241ebff37f0d14
 vendor/lib/libvpplibrary.so|98c8bac6700901d35cd67fb06c63cd1ffdb0dcba
 vendor/lib/libvqzip.so|f85628ea634df1c31d69380d960ad7ea3396e7b2
 vendor/lib64/libmmosal.so|e9fdb48163e92b089cea0c397723a8416436c272
