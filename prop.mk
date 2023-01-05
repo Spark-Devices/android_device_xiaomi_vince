@@ -291,11 +291,11 @@ ro.soc.model=MSM8953
 # SurfaceFlinger
 PRODUCT_SYSTEM_PROPERTIES += \
 debug.sf.use_phase_offsets_as_durations=1 \
-debug.sf.late.sf.duration=13000000 \
-debug.sf.late.app.duration=25500000 \
-debug.sf.early.sf.duration=15500000 \
-debug.sf.early.app.duration=6000000 \
-debug.sf.earlyGl.sf.duration=10500000 \
+debug.sf.late.sf.duration=10500000 \
+debug.sf.late.app.duration=23500000 \
+debug.sf.early.sf.duration=15000000 \
+debug.sf.early.app.duration=15500000 \
+debug.sf.earlyGl.sf.duration=13500000 \
 debug.sf.earlyGl.app.duration=9500000 \
 debug.sf.disable_backpressure=1 \
 debug.sf.disable_hwc=0 \
