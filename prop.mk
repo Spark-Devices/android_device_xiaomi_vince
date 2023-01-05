@@ -158,7 +158,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 debug.cpurend.vsync=false \
 debug.egl.hw=1 \
 debug.enable.sglscale=1 \
-debug.hwui.use_buffer_age=false \
 debug.gralloc.enable_fb_ubwc=1 \
 debug.hwui.renderer=skiagl \
 debug.hwui.skia_atrace_enabled=false \
