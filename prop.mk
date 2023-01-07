@@ -151,7 +151,7 @@ ro.charger.disable_init_blank=true \
 ro.charger.enable_suspend=true
 
 # Cne
-PRODUCT_VENDOR_PROPERTIES += \
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
 persist.vendor.cne.feature=1
 
 # Display/Graphics
