@@ -284,7 +284,7 @@ ro.telephony.default_network=22,22 \
 ro.telephony.call_ring.multiple=false \
 ro.telephony.use_old_mnc_mcc_format=true \
 ril.subscription.types=NV,RUIM \
-service.qti.ims.enabled=1
+vendor.service.qti.ims.enabled=1
 
 # Recovery
 PRODUCT_SYSTEM_PROPERTIES += \
