@@ -115,7 +115,6 @@ bluetooth.profile.opp.enabled?=true \
 bluetooth.profile.pan.nap.enabled?=true \
 bluetooth.profile.pan.panu.enabled?=true \
 bluetooth.profile.pbap.server.enabled?=true \
-bluetooth.profile.sap.server.enabled?=true \
 bluetooth.hardware.power.operating_voltage_mv=3300
 
 # Blur
