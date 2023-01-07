@@ -156,7 +156,7 @@ persist.vendor.cne.feature=1
 # Display/Graphics
 PRODUCT_VENDOR_PROPERTIES += \
 debug.gralloc.enable_fb_ubwc=1 \
-debug.hwui.renderer=skiagl \
+debug.hwui.renderer=opengl \
 debug.hwui.skia_atrace_enabled=false \
 debug.mdpcomp.logs=0 \
 persist.hwc.enable_vds=1 \
