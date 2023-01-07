@@ -155,16 +155,10 @@ persist.vendor.cne.feature=1
 
 # Display/Graphics
 PRODUCT_VENDOR_PROPERTIES += \
-debug.cpurend.vsync=false \
-debug.egl.hw=1 \
-debug.enable.sglscale=1 \
 debug.gralloc.enable_fb_ubwc=1 \
 debug.hwui.renderer=skiagl \
 debug.hwui.skia_atrace_enabled=false \
 debug.mdpcomp.logs=0 \
-debug.performance.tuning=1 \
-dev.pm.dyn_samplingrate=1 \
-persist.demo.hdmirotationlock=false \
 persist.hwc.enable_vds=1 \
 persist.hwc.mdpcomp.enable=true \
 persist.hwc.ptor.enable=true \
@@ -176,8 +170,7 @@ sdm.debug.disable_skip_validate=1 \
 vendor.display.disable_skip_validate=1 \
 vendor.display.disable_rotator_downscale=1 \
 vendor.display.enable_default_color_mode=1 \
-vendor.gralloc.enable_fb_ubwc=1 \
-video.accelerate.hw=1
+vendor.gralloc.enable_fb_ubwc=1
 
 # DPM
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
@@ -307,7 +300,6 @@ debug.sf.earlyGl.app.duration=9500000 \
 debug.sf.disable_backpressure=1 \
 debug.sf.disable_hwc=0 \
 debug.sf.enable_hwc_vds=0 \
-debug.sf.hw=1 \
 debug.sf.auto_latch_unsignaled=true \
 debug.sf.recomputecrop=0 \
 debug.sf.enable_transaction_tracing=false \
