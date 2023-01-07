@@ -103,8 +103,7 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcompostprocbundle \
-    libtinycompress \
-    sound_trigger.primary.msm8953:32
+    libtinycompress
 
 # Audio XML configuration files
 PRODUCT_COPY_FILES += \
