@@ -300,6 +300,7 @@ debug.sf.earlyGl.app.duration=9500000 \
 debug.sf.disable_backpressure=1 \
 debug.sf.disable_hwc=0 \
 debug.sf.enable_hwc_vds=0 \
+debug.sf.latch_unsignaled=1 \
 debug.sf.auto_latch_unsignaled=true \
 debug.sf.recomputecrop=0 \
 debug.sf.enable_transaction_tracing=false \
