@@ -190,10 +190,6 @@ ro.fm.transmitter=false
 PRODUCT_SYSTEM_PROPERTIES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/config
 
-# Logging
-PRODUCT_SYSTEM_PROPERTIES += \
-ro.control_privapp_permissions=log
-
 # FS-verity
 PRODUCT_PRODUCT_PROPERTIES += \
 ro.apk_verity.mode=2

@@ -91,4 +91,7 @@ void vendor_load_properties()
     // Set default bluetooth device name
     property_override("bluetooth.device.default_name", "Redmi 5 Plus");
 
+    // Override ro.control_privapp_permissions
+    property_override("ro.control_privapp_permissions", "log");
+
 }
