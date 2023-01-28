@@ -758,10 +758,6 @@ vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so|c9d0251df63d8e34b6d70a
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|7eb9a18ddc6b8199aa81770add4998ca0886c2a0
 vendor/lib64/vendor.qti.hardware.fm@1.0.so|f7494923e84b136a44f02699082a7e0a380f94e9
 
-# FM Radio Packages (Prebuilt)
-system_ext/lib64/libfmjni.so|67a90768d10a61355702682814bd8ddaf28211fa
--system_ext/priv-app/PrebuiltFMRadio/PrebuiltFMRadio.apk|6a9b183e079d9805a496b748e4103b18a3c99fa5
-
 # Gatekeeper - from LA.UM.8.6.r1-04400-89xx.0
 vendor/lib/hw/gatekeeper.msm8953.so|c17725b59dac2effb3423edc60085366dd629e62
 vendor/lib64/hw/gatekeeper.msm8953.so|b3a9d78faa65029b0a20f2ff6dfe986bc80b64c1
