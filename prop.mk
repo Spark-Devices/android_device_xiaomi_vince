@@ -345,7 +345,7 @@ media.wfd.max_resolution=5
 PRODUCT_SYSTEM_PROPERTIES += \
 zygote.critical_window.minute=10
 
-ifeq ($(TARGET_BUILD_VARIANT),user)
+ifneq ($(TARGET_BUILD_VARIANT),eng)
 # Suppress several logspams on user builds
 PRODUCT_VENDOR_PROPERTIES += \
 persist.log.tag.GoogleInputMethodService=S \
