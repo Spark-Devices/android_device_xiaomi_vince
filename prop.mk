@@ -138,11 +138,7 @@ persist.camera.isp.clock.optmz=0 \
 persist.camera.isp.debug=0 \
 persist.camera.sensor.debug=0 \
 persist.camera.stats.test=5 \
-vidc.enc.dcvs.extra-buff-count=2 \
-persist.camera.HAL3.enabled=1 \
-vendor.camera.hal1.packagelist=com.android.camera2 \
-persist.vendor.camera.CDS=off \
-persist.vendor.camera.video.CDS=off
+vidc.enc.dcvs.extra-buff-count=2
 
 # Charger
 PRODUCT_PRODUCT_PROPERTIES += \
