@@ -95,7 +95,6 @@ vendor.audio.feature.incall_music.enable=true
 
 # Bluetooth
 PRODUCT_VENDOR_PROPERTIES += \
-persist.vendor.service.bdroid.sibs=false \
 vendor.qcom.bluetooth.soc=smd \
 ro.bluetooth.hfp.ver=1.7
 
