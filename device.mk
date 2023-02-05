@@ -132,15 +132,9 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    libldacBT_dec \
-    libbt-vendor \
-    vendor.qti.hardware.btconfigstore@1.0 \
-    vendor.qti.hardware.btconfigstore@2.0 \
-    vendor.qti.hardware.btconfigstore@1.0.vendor \
-    vendor.qti.hardware.btconfigstore@2.0.vendor \
-    android.hardware.bluetooth.a2dp@1.0.vendor \
     android.hardware.bluetooth@1.1.vendor \
-    bt_stack.conf
+    vendor.qti.hardware.btconfigstore@1.0.vendor \
+    vendor.qti.hardware.btconfigstore@2.0.vendor
 
 # Cgroup and task_profiles
 PRODUCT_COPY_FILES += \
@@ -213,7 +207,9 @@ PRODUCT_PACKAGES += \
 
 # Fwk-detect
 PRODUCT_PACKAGES += \
+    libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor \
+    libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
 
 # Gatekeeper HAL
@@ -231,7 +227,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
     $(LOCAL_PATH)/configs/gps/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf \
     $(LOCAL_PATH)/configs/gps/gnss_antenna_info.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gnss_antenna_info.conf
-    
+
 PRODUCT_PACKAGES += \
     libminijail \
     libavservices_minijail \
@@ -259,10 +255,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ims-ext-common \
     ims_ext_common.xml
-
-# Inherit several Android Go Configurations(Beneficial for everyone, even on non-Go devices)
-PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
-PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
 
 # IPA Manager
 PRODUCT_PACKAGES += \
@@ -363,11 +355,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qmi_fw.conf:$(TARGET_COPY_OUT_VENDOR)/etc/qmi_fw.conf
 
-# QTI
-PRODUCT_PACKAGES += \
-    libqti_vndfwk_detect \
-    libqti_vndfwk_detect.vendor
-
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -388,17 +375,8 @@ PRODUCT_PACKAGES += \
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.radio.config@1.0 \
-    android.hardware.radio.config@1.0.vendor \
-    android.hardware.radio.config@1.2 \
     android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio@1.2 \
-    android.hardware.radio@1.2.vendor \
-    android.hardware.radio@1.4 \
-    android.hardware.radio@1.4.vendor \
-    android.hardware.radio@1.5 \
     android.hardware.radio@1.5.vendor \
-    android.hardware.secure_element@1.2 \
     android.hardware.secure_element@1.2.vendor \
     librmnetctl \
     librmnetctl.vendor \
@@ -437,9 +415,6 @@ PRODUCT_PACKAGES += \
     libui_shim \
     libdpmframework_shim
 
-# Speed profile services and wifi-service to reduce RAM and storage
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
-
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
@@ -456,7 +431,6 @@ PRODUCT_COPY_FILES += \
 # USB HAL
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic \
-    android.hardware.usb.gadget@1.0.vendor:64
 
 # vndservicemanager
 PRODUCT_PACKAGES += \
@@ -483,13 +457,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libc++.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++.so
 
-# Always preopt extracted APKs to prevent extracting out of the APK
-# for gms modules.
-PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
-PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
-PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
-USE_DEX2OAT_DEBUG := false
-
 # Whitelisted apps
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti.xml \
@@ -514,3 +481,16 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
+
+# Extra flags
+# Inherit several Android Go Configurations(Beneficial for everyone, even on non-Go devices)
+PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
+PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
+# Always preopt extracted APKs to prevent extracting out of the APK
+# for gms modules.
+PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+USE_DEX2OAT_DEBUG := false
+# Speed profile services and wifi-service to reduce RAM and storage
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
