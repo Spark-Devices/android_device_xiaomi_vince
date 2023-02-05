@@ -229,10 +229,6 @@ on post-fs-data
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
 
-# Restrict permissions to socket file 
-    # to hide Magisk & co.
-    chmod 440 /proc/net/unix
-    
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
 
@@ -308,7 +304,7 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqb
     class core
     user root
     group root
-    
+
 on charger
     setprop persist.sys.usb.config mass_storage
     start qcom-post-boot
@@ -330,16 +326,16 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
     disabled
     oneshot
 
-# FPS Info
-    on boot
+on boot
+    # FPS Info
     chown system graphics /sys/class/graphics/fb0/measured_fps
     chmod 0666 /sys/class/graphics/fb0/measured_fps
-    
+
 on property:hw.fm.init=*
     write /sys/module/radio_iris_transport/parameters/fmsmd_set ${hw.fm.init}
 
 on property:persist.radio.airplane_mode_on=1
     stop vendor.qcrild
-    stop vendor.qcrild2
     start vendor.qcrild
+    stop vendor.qcrild2
     start vendor.qcrild2
