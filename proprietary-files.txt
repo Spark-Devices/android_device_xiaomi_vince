@@ -1185,12 +1185,10 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so|460e589128fce0b0e83bb3c75aa32f7e1a9
 
 # Sensors - from LA.UM.9.6.2.r1-03600-89xx.0
 vendor/bin/sensors.qti|d87eb74b701f9e047c8ed7deb5fcd43a5639572a
-vendor/lib/hw/activity_recognition.msm8953.so|824eb490aee2203d33ea5d864e49b916474cd13e
 vendor/lib/libsensor1.so|4c720827e086453d20223c0ef76f0bf5a52b6623
 vendor/lib/libsensor_reg.so|848f74306042a91eab6dc68723d27062dc6e8522
 vendor/lib/libsensor_user_cal.so|c2694930fd7991eb7d53174e00781546e2360a82
 vendor/lib/sensors.ssc.so|ab53946c1bf4d207bb1a48fa9da92ceb3fdf39c6
-vendor/lib64/hw/activity_recognition.msm8953.so|19637d97c2cf50a6c7b34d7529f2636198404522
 vendor/lib64/libsensor1.so|ecd936e78d9ba35878cb0bfbff38289e8651ac8d
 vendor/lib64/libsensor_reg.so|4550e44b37ce57db92bb379e9c65ece68c802d1e
 vendor/lib64/libsensor_user_cal.so|9cd4a306c7d67a2248b1be89d4517ecd6c0fbbc2
