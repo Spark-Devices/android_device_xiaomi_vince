@@ -179,6 +179,10 @@ persist.vendor.mwqem.enable=1
 PRODUCT_VENDOR_PROPERTIES += \
 drm.service.enabled=true
 
+# Feature flags
+PRODUCT_VENDOR_PROPERTIES += \
+persist.sys.fflag.override.settings_enable_monitor_phantom_procs=false
+
 # Fingerprint
 PRODUCT_VENDOR_PROPERTIES += \
 persist.qfp=false
@@ -234,10 +238,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 ro.vendor.use_data_netmgrd=true \
 persist.data.netmgrd.qos.enable=true \
 persist.vendor.data.mode=concurrent
-
-# Phantom process monitoring
-PRODUCT_SYSTEM_PROPERTIES += \
-sys.fflag.override.settings_enable_monitor_phantom_procs=false
 
 # Qualcomm
 PRODUCT_VENDOR_PROPERTIES += \
