@@ -228,9 +228,9 @@ vendor.vidc.enc.disable.pq=true \
 vendor.vidc.enc.disable_bframes=1 \
 vendor.video.disable.ubwc=1
 
-# codecs:(PARSER_)AAC AC3 AMR_NB AMR_WB ASF DTS FLV 3GP 3G2 MP2PS MP2TS MP3 OGG QCP WAV FLAC AIFF
+# codecs:(PARSER_)AAC AC3 AMR_NB AMR_WB ASF DTS FLV 3G2 MP2PS MP2TS MP3 OGG QCP WAV FLAC AIFF
 PRODUCT_VENDOR_PROPERTIES += \
-vendor.mm.enable.qcom_parser=523231
+vendor.mm.enable.qcom_parser=522975
 
 # Perf
 PRODUCT_VENDOR_PROPERTIES += \
