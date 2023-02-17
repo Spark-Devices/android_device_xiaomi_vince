@@ -232,6 +232,11 @@ vendor.video.disable.ubwc=1
 PRODUCT_VENDOR_PROPERTIES += \
 vendor.mm.enable.qcom_parser=301715
 
+# Disable media transcoding
+PRODUCT_SYSTEM_PROPERTIES += \
+persist.sys.fuse.transcode_user_control=true \
+persist.sys.fuse.transcode_enabled=false
+
 # Perf
 PRODUCT_VENDOR_PROPERTIES += \
 ro.sys.fw.dex2oat_thread_count=8 \
