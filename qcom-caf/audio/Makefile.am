@@ -1,4 +1,4 @@
-SUBDIRS = hal hal/audio_extn
+SUBDIRS = hal post_proc
 
 if QAHW_SUPPORT
 SUBDIRS += qahw_api qahw_api/test

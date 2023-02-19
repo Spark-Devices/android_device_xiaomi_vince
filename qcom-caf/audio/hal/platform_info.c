@@ -42,9 +42,6 @@
 #include "audio_extn.h"
 #include <platform.h>
 #include <math.h>
-#ifdef LINUX_ENABLED
-#include <float.h>
-#endif
 
 #ifdef DYNAMIC_LOG_ENABLED
 #include <log_xml_parser.h>

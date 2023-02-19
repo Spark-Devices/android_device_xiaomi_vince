@@ -37,6 +37,7 @@
 #include <stdio.h>
 #include <dlfcn.h>
 #include <unistd.h>
+
 #include <log/log.h>
 
 #ifndef ADSP_DEFAULT_LISTENER_NAME
