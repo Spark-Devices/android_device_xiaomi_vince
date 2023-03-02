@@ -1,7 +1,0 @@
-cc_library_shared {
-    name: "libdpmframework_shim",
-    srcs: ["dpm/strdup8to16.cpp", "dpm/strdup16to8.cpp"],
-    shared_libs: ["liblog", "libbase"],
-    compile_multilib: "64",
-    system_ext_specific: true
-}
