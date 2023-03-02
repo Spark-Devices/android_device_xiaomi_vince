@@ -85,11 +85,6 @@ TARGET_SUPPORT_HAL1 := false
 BOARD_QTI_CAMERA_32BIT_ONLY := true
 TARGET_TS_MAKEUP := true
 
-# API Override
-TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
-    /vendor/bin/mm-qcamera-daemon=27 \
-    /system/vendor/bin/mm-qcamera-daemon=27 \
-
 # CNE and DPM
 BOARD_USES_QCNE := true
 
@@ -101,11 +96,6 @@ TARGET_USES_ION := true
 TARGET_USES_GRALLOC1 := true
 TARGET_USES_HWC2 := true
 TARGET_DISABLE_POSTRENDER_CLEANUP := true
-TARGET_USES_COLOR_METADATA := true
-TARGET_NO_RPC := true
-
-# UI
-TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS :=  0x2000
 
 # Filesystem
 TARGET_USERIMAGES_USE_F2FS := true
@@ -124,10 +114,6 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 # FM
 BOARD_HAVE_QCOM_FM := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
-
-# GPS
-TARGET_NO_RPC := true
-TARGET_USES_HARDWARE_QCOM_GPS := false
 
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/vintf/framework_manifest.xml
