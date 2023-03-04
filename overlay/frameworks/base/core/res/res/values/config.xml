@@ -16,7 +16,6 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>
@@ -412,6 +411,14 @@
          provisioning, availability etc -->
     <bool name="config_carrier_vt_available">true</bool>
 
+    <!-- Flag specifying whether WFC over IMS is available on device -->
+    <bool name="config_device_wfc_ims_available">true</bool>
+
+    <!-- Flag specifying whether WFC over IMS should be available for carrier: independent of
+         carrier provisioning. If false: hard disabled. If true: then depends on carrier
+         provisioning, availability etc -->
+    <bool name="config_carrier_wfc_ims_available">true</bool>
+
     <!-- Config determines whether to update phone object when voice registration
          state changes. Voice radio tech change will always trigger an update of
          phone object irrespective of this config -->
@@ -489,12 +496,6 @@
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
     <string name="config_wifi_tcp_buffers">524288,2097152,8388608,262144,524288,4194304</string>
 
-    <!-- Flag specifying whether WFC over IMS is available on device -->
-    <bool name="config_device_wfc_ims_available">true</bool>
-
-    <!-- Whether device supports double tap to wake -->
-    <bool name="config_supportDoubleTapWake">true</bool>
-
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
          in hardware. -->
      <bool name="config_setColorTransformAccelerated">true</bool>
@@ -555,6 +556,9 @@
     -->
     <string name="config_defaultAutofillService" translatable="false">com.google.android.gms/.autofill.service.AutofillService</string>
 
+    <!-- Whether device supports double tap to wake -->
+    <bool name="config_supportDoubleTapWake">true</bool>
+
     <!-- Keycodes of gestures. If the gesture is not supported set it to 0. -->
     <integer name="config_doubleTapKeyCode">143</integer>
 
@@ -597,13 +601,6 @@
          manager will disable alpha trasformation in animations where not
          strictly needed. -->
     <bool name="config_sf_limitedAlpha">true</bool>
-
-    <!-- Smart charge sysfs node and value for suspend/resume charging-->
-    <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/charging_enabled</string>
-    <string name="config_SmartChargingSuspendValue" translatable="false">0</string>
-    <string name="config_SmartChargingResumeValue" translatable="false">1</string>
-    <integer name="config_smartChargingBatteryLevel">80</integer>
-    <integer name="config_smartChargingBatteryResumeLevel">60</integer>
 
     <!-- Enables or disables fading edges when marquee is enabled in TextView.
          Off by default, since the framebuffer readback used to implement the
@@ -670,6 +667,13 @@
     <!-- Whether safe headphone volume is enabled or not (country specific). -->
     <bool name="config_safe_media_volume_enabled">false</bool>
 
+    <!-- Smart charge sysfs node and value for suspend/resume charging-->
+    <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/charging_enabled</string>
+    <string name="config_SmartChargingSuspendValue" translatable="false">0</string>
+    <string name="config_SmartChargingResumeValue" translatable="false">1</string>
+    <integer name="config_smartChargingBatteryLevel">80</integer>
+    <integer name="config_smartChargingBatteryResumeLevel">60</integer>
+
     <!-- System Info -->
     <bool name="config_supportSystemInfo">true</bool>
     <string name="config_sysCPUTemp">"/sys/class/thermal/thermal_zone0/temp"</string>
@@ -678,5 +682,4 @@
     <string name="config_sysGPULoad">"/sys/kernel/gpu/gpu_busy"</string>
     <integer name="config_sysCPUTempMultiplier">1000</integer>
     <integer name="config_sysBatteryTempMultiplier">10</integer>
-
 </resources>
