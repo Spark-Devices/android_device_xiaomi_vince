@@ -61,7 +61,6 @@ on post-fs
     setrlimit 8 67108864 67108864
     start vendor.qseecomd
     wait_for_prop vendor.sys.listeners.registered true
-    write /dev/ipa 1
 
 on post-fs-data
     # Create folder for mm-qcamera-daemon
@@ -158,6 +157,9 @@ on charger
     start thermal-engine
     chown system system /sys/class/leds/red/brightness
     write /sys/class/leds/red/brightness 255
+
+on early-boot
+    write /dev/ipa 1
 
 on boot
     chown system system /sys/kernel/hbtp/display_pwr
