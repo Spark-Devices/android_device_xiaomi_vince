@@ -106,7 +106,13 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcompostprocbundle \
-    libtinycompress
+    libtinycompress \
+    libhfp \
+    libsndmonitor \
+    libspkrprot \
+    libaudiopreprocessing \
+    libaudioroute \
+    libvolumelistener
 
 # Audio XML configuration files
 PRODUCT_COPY_FILES += \
