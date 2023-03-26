@@ -2,7 +2,7 @@
 # prop.mk for vince
 #
 
-# ART
+# ART/Dex2oat
 PRODUCT_VENDOR_PROPERTIES += \
 dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
 dalvik.vm.boot-dex2oat-threads=8 \
@@ -14,6 +14,9 @@ dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
 dalvik.vm.image-dex2oat-filter=quicken \
 dalvik.vm.image-dex2oat-threads=8 \
 dalvik.vm.systemuicompilerfilter=speed
+
+PRODUCT_SYSTEM_PROPERTIES += \
+ro.sys.fw.dex2oat_thread_count=8
 
 # Audio
 PRODUCT_VENDOR_PROPERTIES += \
@@ -95,8 +98,7 @@ vendor.audio.feature.incall_music.enable=true
 
 # Bluetooth
 PRODUCT_VENDOR_PROPERTIES += \
-vendor.qcom.bluetooth.soc=smd \
-ro.bluetooth.hfp.ver=1.7
+vendor.qcom.bluetooth.soc=smd
 
 # Bluetooth Profiles
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
@@ -126,7 +128,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 sys.vendor.shutdown.waittime=500
 
 # Camera
-PRODUCT_VENDOR_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES += \
 persist.vendor.camera.display.lmax=1280x720 \
 persist.vendor.camera.display.umax=1920x1080 \
 vendor.camera.lowpower.record.enable=1 \
@@ -155,19 +157,21 @@ debug.gralloc.enable_fb_ubwc=1 \
 debug.hwui.renderer=opengl \
 debug.hwui.skia_atrace_enabled=false \
 debug.mdpcomp.logs=0 \
-persist.hwc.enable_vds=1 \
-persist.hwc.mdpcomp.enable=true \
-persist.hwc.ptor.enable=true \
 ro.hardware.egl=adreno \
 ro.hardware.vulkan=adreno \
 ro.opengles.version=196610 \
 ro.vendor.display.cabl=0 \
-sdm.debug.disable_skip_validate=1 \
 vendor.display.disable_skip_validate=1 \
 vendor.display.disable_rotator_downscale=1 \
 vendor.display.enable_default_color_mode=1 \
 vendor.display.disable_scaler=1 \
 vendor.gralloc.enable_fb_ubwc=1
+
+PRODUCT_SYSTEM_PROPERTIES += \
+persist.hwc.enable_vds=1 \
+persist.hwc.mdpcomp.enable=true \
+persist.hwc.ptor.enable=true \
+sdm.debug.disable_skip_validate=1
 
 # DPM
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
@@ -189,7 +193,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 persist.sys.fflag.override.settings_enable_monitor_phantom_procs=false
 
 # Fingerprint
-PRODUCT_VENDOR_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES += \
 persist.qfp=false
 
 # FM
@@ -213,23 +217,25 @@ ro.control_privapp_permissions=log
 
 # Media
 PRODUCT_VENDOR_PROPERTIES += \
-av.debug.disable.pers.cache=1 \
 debug.stagefright.omx_default_rank=0 \
-media.msm8956hw=0 \
-media.stagefright.audio.sink=280 \
 media.stagefright.thumbnail.prefer_hw_codecs=true \
-mmp.enable.3g2=true \
 vendor.audio.hw.aac.encoder=true \
 vendor.vidc.debug.level=0 \
 vendor.vidc.dec.downscalar_height=1088 \
 vendor.vidc.dec.downscalar_width=1920 \
 vendor.vidc.disable.split.mode=1 \
 vendor.vidc.enc.disable.pq=true \
-vendor.vidc.enc.disable_bframes=1 \
+vendor.vidc.enc.disable_bframes=1
+
+PRODUCT_SYSTEM_PROPERTIES += \
+av.debug.disable.pers.cache=1 \
+media.msm8956hw=0 \
+media.stagefright.audio.sink=280 \
+mmp.enable.3g2=true \
 vendor.video.disable.ubwc=1
 
 # codecs:(PARSER_)AAC AC3 ASF FLV 3G2 MP2PS MP2TS QCP AIFF
-PRODUCT_VENDOR_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES += \
 vendor.mm.enable.qcom_parser=301715
 
 # Disable media transcoding
@@ -239,15 +245,16 @@ persist.sys.fuse.transcode_enabled=false
 
 # Perf
 PRODUCT_VENDOR_PROPERTIES += \
-ro.sys.fw.dex2oat_thread_count=8 \
 ro.vendor.extension_library=libqti-perfd-client.so \
 ro.vendor.perf.scroll_opt=true
 
 # Network manager daemon
 PRODUCT_VENDOR_PROPERTIES += \
 ro.vendor.use_data_netmgrd=true \
-persist.data.netmgrd.qos.enable=true \
 persist.vendor.data.mode=concurrent
+
+PRODUCT_SYSTEM_PROPERTIES += \
+persist.data.netmgrd.qos.enable=true
 
 # Qualcomm
 PRODUCT_VENDOR_PROPERTIES += \
@@ -263,12 +270,6 @@ persist.dbg.vt_avail_ovr=1 \
 persist.dbg.wfc_avail_ovr=1 \
 persist.radio.multisim.config=dsds \
 persist.vendor.data.iwlan.enable=true \
-persist.vendor.ims.disableIMSLogs=1 \
-persist.vendor.ims.disableADBLogs=1 \
-persist.vendor.ims.disableDebugDataPathLogs=1 \
-persist.vendor.ims.disableDebugLogs=1 \
-persist.vendor.ims.disableSigHandler=1 \
-persist.vendor.ims.disableQXDMLogs=1 \
 persist.vendor.radio.add_power_save=1 \
 persist.vendor.radio.apm_sim_not_pwdn=1 \
 persist.vendor.radio.custom_ecc=1 \
@@ -279,8 +280,16 @@ persist.vendor.radio.mt_sms_ack=30 \
 ro.telephony.default_network=22,22 \
 ro.telephony.call_ring.multiple=false \
 ro.telephony.use_old_mnc_mcc_format=true \
-ril.subscription.types=NV,RUIM \
 vendor.service.qti.ims.enabled=1
+
+PRODUCT_SYSTEM_PROPERTIES += \
+persist.vendor.ims.disableIMSLogs=1 \
+persist.vendor.ims.disableADBLogs=1 \
+persist.vendor.ims.disableDebugDataPathLogs=1 \
+persist.vendor.ims.disableDebugLogs=1 \
+persist.vendor.ims.disableSigHandler=1 \
+persist.vendor.ims.disableQXDMLogs=1 \
+ril.subscription.types=NV,RUIM
 
 # Recovery
 PRODUCT_SYSTEM_PROPERTIES += \
