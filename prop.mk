@@ -183,10 +183,6 @@ persist.vendor.mwqem.enable=1
 PRODUCT_VENDOR_PROPERTIES += \
 drm.service.enabled=true
 
-# Fast mass storage
-PRODUCT_SYSTEM_PROPERTIES += \
-ro.vold.umsdirtyratio=50
-
 # Feature flags
 PRODUCT_VENDOR_PROPERTIES += \
 persist.sys.fflag.override.settings_enable_monitor_phantom_procs=false
