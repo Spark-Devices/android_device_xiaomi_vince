@@ -80,10 +80,6 @@ vendor/lib64/libsoc_helper.so|affbc1cc49d3df3a6e174a21bf3fe79c7130d1c0
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|25b2ce43c28c274b15c3b683831c214e3efb531d
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|117b74f1df4ee67297f431ae47d622bbb8f587ca
 
-# Bluetooth (aptX) - from Crosshatch - 11/RQ2A.210405.006/7214111
-system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
-system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
-
 # Camera - from vince
 lib/libtrueportrait.so:vendor/lib/libtrueportrait.so|b8e11c098bd859aae6c535cdb87e3e36f6b1c6ef
 vendor/bin/mm-qcamera-daemon|9416e6cdc4fe2aed8de5cf1f3919bba02511be4e
