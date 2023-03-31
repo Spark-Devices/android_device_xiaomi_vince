@@ -97,7 +97,9 @@ vendor.audio.feature.incall_music.enable=true
 
 # Bluetooth
 PRODUCT_VENDOR_PROPERTIES += \
-vendor.qcom.bluetooth.soc=smd
+vendor.qcom.bluetooth.soc=smd \
+persist.vendor.bt.a2dp_offload_cap=sbc-aac-aptx-aptxhd-ldac \
+persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aac-aptx-aptxhd-ldac
 
 # Bluetooth Profiles
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
