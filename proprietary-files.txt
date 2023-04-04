@@ -969,9 +969,6 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|0119fa4d87505bc5d9426ec8ffe56d9dd3bc9e4f
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|57d936014f89811481712ac7a08d104b85b636b5
 
-# Power-off charging daemon
--sbin/charger:bin/chargeonlymode|664dfa548b81cac348f1699222160f8d2b4d247c
-
 # QMI (diag) - from LA.UM.9.6.3.r1-04400-89xx.0
 system_ext/lib64/libdiag_system.so|c50a093e89c9a33277e6f6a2687a6cd74571b9b8
 system_ext/lib64/vendor.qti.diaghal@1.0.so|92bdaafe948648d9cc4200001d40cf3faf132b4c
