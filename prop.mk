@@ -169,6 +169,8 @@ vendor.display.disable_scaler=1 \
 vendor.gralloc.enable_fb_ubwc=1
 
 PRODUCT_SYSTEM_PROPERTIES += \
+debug.egl.hw=1 \
+debug.sf.hw=1 \
 persist.hwc.enable_vds=1 \
 persist.hwc.mdpcomp.enable=true \
 persist.hwc.ptor.enable=true \
