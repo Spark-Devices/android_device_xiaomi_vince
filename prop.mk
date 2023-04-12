@@ -21,7 +21,6 @@ ro.sys.fw.dex2oat_thread_count=8
 # Audio
 PRODUCT_VENDOR_PROPERTIES += \
 af.fast_track_multiplier=2 \
-audio.deep_buffer.media=true \
 audio.offload.disable=true \
 audio.offload.min.duration.secs=30 \
 audio.offload.video=true \
