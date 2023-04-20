@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2016-2021, The Linux Foundation. All rights reserved.
+* Copyright (c) 2016-2020, The Linux Foundation. All rights reserved.
 *
 * Redistribution and use in source and binary forms, with or without
 * modification, are permitted provided that the following conditions are
@@ -429,13 +429,10 @@ int on_dev_event(dev_event_t *dev_event)
     snprintf(val, sizeof(val), "%s,%s", dev_event->dev,
              dev_event->status ? "ON" : "OFF");
 
-    int ret = 0;
+    if (str_parms_add_str(params, AUDIO_PARAMETER_KEY_EXT_AUDIO_DEVICE, val) < 0)
+        return -1;
 
-    if (str_parms_add_str(params, AUDIO_PARAMETER_KEY_EXT_AUDIO_DEVICE, val) < 0) {
-        ret = -1;
-    } else {
-        ret = notify(params);
-    }
+    int ret = notify(params);
     str_parms_destroy(params);
     return ret;
 }
@@ -486,13 +483,10 @@ bool on_sndcard_state_update(sndcard_t *s)
     key = (is_cpe ?  "CPE_STATUS" :
           (is_slpi ? "SLPI_STATUS" :
                      "SND_CARD_STATUS"));
+    if (str_parms_add_str(params, key, val) < 0)
+        return -1;
 
-    int ret = 0;
-    if (str_parms_add_str(params, key, val) < 0) {
-        ret = -1;
-    } else {
-        ret = notify(params);
-    }
+    int ret = notify(params);
     str_parms_destroy(params);
     return ret;
 }

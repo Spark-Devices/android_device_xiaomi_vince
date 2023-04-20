@@ -1659,7 +1659,6 @@ static snd_device_t derive_playback_snd_device(void * platform,
 
     snd_device_t d1 = uc->out_snd_device;
     snd_device_t d2 = new_snd_device;
-    snd_device_t ret = 0;
 
     list_init(&a1);
     list_init(&a2);
@@ -1690,46 +1689,33 @@ static snd_device_t derive_playback_snd_device(void * platform,
                       __func__,
                       list_length(&a1) > 1 ? d1 : d2);
             }
-            ret = d2;
             goto end;
         }
 
         if (platform_check_backends_match(d3[0], d3[1])) {
-            ret = d2;
-            goto end; // case 5
+            return d2; // case 5
         } else {
             if ((list_length(&a1) > 1) && (list_length(&a2) > 1) &&
-                 platform_check_backends_match(d1, d2)) {
-                    ret = d2;
-                    goto end; //case 9
-                 }
-            if (list_length(&a1) > 1) {
-                ret = d1;
-                goto end; //case 7
-            }
+                 platform_check_backends_match(d1, d2))
+                return d2; //case 9
+            if (list_length(&a1) > 1)
+                return d1; //case 7
             // check if d1 is related to any of d3's
-            if (d1 == d3[0] || d1 == d3[1]) {
-                ret = d1;
-                goto end; // case 1
-            } else {
-                 ret = d3[1];
-                goto end; // case 8
-            }
+            if (d1 == d3[0] || d1 == d3[1])
+                return d1; // case 1
+            else
+                return d3[1]; // case 8
         }
     } else {
         if (platform_check_backends_match(d1, d2)) {
-           ret = d2;
-           goto end; // case 2, 4
+            return d2; // case 2, 4
         } else {
-            ret = d1;
-            goto end; // case 6, 3
+            return d1; // case 6, 3
         }
     }
 
 end:
-    clear_devices(&a1);
-    clear_devices(&a2);
-    return ret; // return whatever was calculated before.
+    return d2; // return whatever was calculated before.
 }
 
 static void check_usecases_codec_backend(struct audio_device *adev,
@@ -5055,7 +5041,6 @@ int route_output_stream(struct stream_out *out,
     /*handles device and call state changes*/
     audio_extn_extspk_update(adev->extspk);
 
-    clear_devices(&new_devices);
 error:
     ALOGV("%s: exit: code(%d)", __func__, ret);
     return ret;
@@ -10182,12 +10167,10 @@ int adev_create_audio_patch(struct audio_hw_device *dev,
 
     // Update routing for stream
     if (stream != NULL) {
-        if (p_info->patch_type == PATCH_PLAYBACK) {
+        if (p_info->patch_type == PATCH_PLAYBACK)
             ret = route_output_stream((struct stream_out *) stream, &devices);
-            clear_devices(&devices);
-        } else if (p_info->patch_type == PATCH_CAPTURE) {
+        else if (p_info->patch_type == PATCH_CAPTURE)
             ret = route_input_stream((struct stream_in *) stream, &devices, input_source);
-        }
         if (ret < 0) {
             pthread_mutex_lock(&adev->lock);
             s_info->patch_handle = AUDIO_PATCH_HANDLE_NONE;
