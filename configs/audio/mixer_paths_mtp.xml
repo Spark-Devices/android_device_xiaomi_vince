@@ -1691,13 +1691,7 @@
     </path>
 
     <path name="voice-speaker-dmic-ef">
-    	<ctl name="VOC_EXT_EC MUX" value="QUIN_MI2S_TX" />
-        <ctl name="MI2S_TX Channels" value="Two" />
-        <ctl name="ADC3 Volume" value="6" />
-        <ctl name="DEC1 MUX" value="ADC2" />
-        <ctl name="ADC2 MUX" value="INP3" />
-        <ctl name="ADC1 Volume" value="6" />
-        <ctl name="DEC2 MUX" value="ADC1" />
+        <path name="voice-speaker-mic" />
     </path>
 
     <path name="voice-rec-dmic-ef">
