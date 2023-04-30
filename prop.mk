@@ -339,10 +339,6 @@ vendor.usb.rmnet.func.name=rmnet_bam \
 vendor.usb.rmnet.inst.name=rmnet \
 vendor.usb.rndis.func.name=rndis_bam
 
-# Watchdog
-PRODUCT_SYSTEM_PROPERTIES += \
-ro.hw_timeout_multiplier=3
-
 # Wifi
 PRODUCT_VENDOR_PROPERTIES += \
 wifi.interface=wlan0
