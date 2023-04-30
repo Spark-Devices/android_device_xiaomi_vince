@@ -347,10 +347,6 @@ wifi.interface=wlan0
 PRODUCT_SYSTEM_PROPERTIES += \
 media.wfd.max_resolution=5
 
-# Zygote
-PRODUCT_SYSTEM_PROPERTIES += \
-zygote.critical_window.minute=10
-
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 # Suppress several logspams on user builds
 PRODUCT_VENDOR_PROPERTIES += \
