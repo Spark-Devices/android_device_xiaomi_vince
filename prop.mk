@@ -194,6 +194,10 @@ ro.frp.pst=/dev/block/bootdevice/by-name/config
 PRODUCT_SYSTEM_PROPERTIES += \
 ro.control_privapp_permissions=log
 
+# FS-verity
+PRODUCT_PRODUCT_PROPERTIES += \
+ro.apk_verity.mode=2
+
 # Media
 PRODUCT_VENDOR_PROPERTIES += \
 debug.stagefright.omx_default_rank=0 \
