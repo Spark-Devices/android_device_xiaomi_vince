@@ -21,11 +21,13 @@ PRODUCT_SHIPPING_API_LEVEL := 25
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
 # RRO (Runtime Resource Overlay)
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay/packages/apps/CarrierConfig
+    $(LOCAL_PATH)/overlay/packages/apps/CarrierConfig \
+    $(LOCAL_PATH)/overlay-lineage
 
 # APEX
 OVERRIDE_TARGET_FLATTEN_APEX := true
