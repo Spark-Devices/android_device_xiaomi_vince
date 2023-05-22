@@ -270,6 +270,9 @@ persist.vendor.ims.disableSigHandler=1 \
 persist.vendor.ims.disableQXDMLogs=1 \
 ril.subscription.types=NV,RUIM
 
+PRODUCT_PRODUCT_PROPERTIES += \
+ro.telephony.block_binder_thread_on_incoming_calls=false
+
 # Recovery
 PRODUCT_SYSTEM_PROPERTIES += \
 persist.sys.recovery_update=false
