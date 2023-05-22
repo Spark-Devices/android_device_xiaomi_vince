@@ -1,30 +1,30 @@
-# ADSP - from FP3:11/8901.4.A.0019.2
-vendor/bin/adsprpcd|5e246a6f5d2dca27e29b233a17e4673532191b95
-vendor/bin/dspservice|a7344fc3d27a49df30858ebc3f73ee5818e752d4
-vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc|8f0eb84d3eb5fc0f683ef7b975b75044d56f513e
-vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc|fbf2bb38ca6bdddf98c7123da9e1f263a4eec55f
-vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|f060101b26d3674bb173e5fc95e118f56a8ac15d
-vendor/lib/libadsp_default_listener.so|4baca0fcd9a7e7eb6c3030d6ac2a8d6554c508ae
-vendor/lib/libadsprpc.so|e0bc6ba5d66f918ffef39d2ba8cdd6055686ce43
-vendor/lib/libfastcvadsp_stub.so|886e33a28a32f6a143081ab07deb186fd379408f
-vendor/lib/libfastcvopt.so|c5bd1dd6c1fe02964f75f44ad05b472951a327f1
-vendor/lib/libmdsprpc.so|36c4319420dbb531b4a66c786059bd3f5d4c4689
-vendor/lib/vendor.qti.hardware.dsp@1.0.so|d2a8ce26770cc99c288d7dfce9ac2c054be0c90d
-vendor/lib64/libadsp_default_listener.so|3ebcf635d6cdc447b8ecd40ea76bda39bf82c308
-vendor/lib64/libadsprpc.so|53e5e6d473eaf60ad20df9aecdf6daeb07019027
-vendor/lib64/libfastcvadsp_stub.so|a7dd1371e6f8f888d3a411cbbc6778c6a0271984
-vendor/lib64/libfastcvopt.so|b68d2ce2a17193a5c91cadb1291fa9ea69ee80b2
-vendor/lib64/libmdsprpc.so|f2cf241d1ea01ad13da6232717abceee138347a6
-vendor/lib64/vendor.qti.hardware.dsp@1.0.so|b6fa958d634eed5748c8f359b9104e2edf5aa20f
+# ADSP - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
+vendor/bin/adsprpcd|a5e878691577485c9f7ee33dfe02384a13f0a265
+vendor/lib/libadsp_default_listener.so|c9a1ee00b32a93a9496ec84393afa0625e929eed
+vendor/lib/libadsprpc.so|e00e8dcb88e9b204fd90bb2c32afcc7fa28dbad1
+vendor/lib/libfastcvadsp_stub.so|996345605e1d631151a6b4e9cd9f65b2c7e82dac
+vendor/lib/libfastcvopt.so|2df00c3827fe1db322084cb3935241f17d1532f4
+vendor/lib/libmdsprpc.so|642f74bfec1098397c7ee025e0744badbf14fc39
+vendor/lib/libsdsprpc.so|2963c73745b8b1ccab64260ce93e3679c7c66113
+vendor/lib64/libadsp_default_listener.so|d7436ae6255671b4c3af533b5c89d91d75d5069e
+vendor/lib64/libadsprpc.so|3dd28423f6b786584a1c80b2cdb6e22a1c00b0ae
+vendor/lib64/libfastcvadsp_stub.so|f101b66fa4a450b5af2e6aa9f7aaa28f9a876005
+vendor/lib64/libfastcvopt.so|f5e25aa055a57e23530b858bf7dd204a6009effc
+vendor/lib64/libmdsprpc.so|38de6a53d3c2ff60a253c7c6a0d3b46962e8e194
+vendor/lib64/libsdsprpc.so|1e89a33bae491abe4c81bb77c8fabf59bff4b853
 
-# ADSP modules - from FP3:11/8901.4.A.0019.2
-vendor/lib/rfsa/adsp/libadsp_fd_skel.so|677d2932dac248049f031fc5893163e22b49439a
+# ADSP (Modules) - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
+vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so|f4d8675a46c5e52add8f8e90e35b29cd33ac582b
+vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so|b9f68e320d24e9c51871a2056e1f47239bd1cb40
+vendor/lib/rfsa/adsp/libadsp_hvx_add_constant.so|035272c1d77bcd04e3a838056d512964744c9322
+vendor/lib/rfsa/adsp/libadsp_hvx_skel.so|6a1d6ee55cc65d0f12f6a9bfd04823b46d2d6a24
+vendor/lib/rfsa/adsp/libadsp_hvx_stats.so|2f6abffe644ed918ff1a7e0e330f8e9c32add72c
+vendor/lib/rfsa/adsp/libadsp_hvx_zzhdr_BGGR.so|3f82d78a7c9e88c5fdc02dc0761349e4ab95abf8
+vendor/lib/rfsa/adsp/libadsp_hvx_zzhdr_RGGB.so|b21151ad414cd7310117fceb924a72fd20e97257
 vendor/lib/rfsa/adsp/libapps_mem_heap.so|5c82ad9cfe3f30105d899e2a4e90cc7566f81252
 vendor/lib/rfsa/adsp/libdspCV_skel.so|628985174b0088bed21c866d7984d23855e5e150
 vendor/lib/rfsa/adsp/libfastcvadsp.so|9818625bfa018f517e32a8f4a1e7fb4b255e5049
 vendor/lib/rfsa/adsp/libfastcvadsp_skel.so|1ff4a48009e88435d93fd2b9b0c5ea59cedbb4f7
-vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so|944169db3ac67056b92ef4f850f69346958370b5
-vendor/lib/rfsa/adsp/libscveT2T_skel.so|91b9200dbb982abf0d6b440668252d892a616f66
 
 # ANT+ - from FP3:11/8901.4.A.0019.2
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so|2bad2579ce576c46af6a50ee6687bd92fa7f76cd
