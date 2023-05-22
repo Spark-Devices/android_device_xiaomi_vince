@@ -170,6 +170,10 @@ PRODUCT_PACKAGES += \
     libmm-qcamera \
     libdng_sdk.vendor
 
+# Camera app (GrapheneOS)
+PRODUCT_PACKAGES += \
+    Camera
+
 # Consumerir
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
