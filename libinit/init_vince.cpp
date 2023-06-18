@@ -50,18 +50,18 @@ void check_device()
     sysinfo(&sys);
 
     if (sys.totalram > 3072ull * 1024 * 1024) {
-        heapstartsize = "16m";
+        heapstartsize = "8m";
         heapgrowthlimit = "256m";
-        heapsize = "768m";
-        heaptargetutilization = "0.8";
-        heapminfree = "8m";
+        heapsize = "512m";
+        heaptargetutilization = "0.6";
+        heapminfree = "512k";
         heapmaxfree = "16m";
     } else {
         heapstartsize = "8m";
         heapgrowthlimit = "192m";
         heapsize = "512m";
         heaptargetutilization = "0.75";
-        heapminfree = "4m";
+        heapminfree = "512k";
         heapmaxfree = "8m";
     }
 }

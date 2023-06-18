@@ -2,6 +2,22 @@
 # prop.mk for vince
 #
 
+# ART/Dex2oat
+PRODUCT_VENDOR_PROPERTIES += \
+dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
+dalvik.vm.boot-dex2oat-threads=8 \
+dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
+dalvik.vm.dex2oat-filter=quicken \
+dalvik.vm.dex2oat-threads=8 \
+dalvik.vm.dex2oat64.enabled=true \
+dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
+dalvik.vm.image-dex2oat-filter=quicken \
+dalvik.vm.image-dex2oat-threads=8 \
+dalvik.vm.systemuicompilerfilter=speed
+
+PRODUCT_SYSTEM_PROPERTIES += \
+ro.sys.fw.dex2oat_thread_count=8
+
 # Audio
 PRODUCT_VENDOR_PROPERTIES += \
 af.fast_track_multiplier=1 \
@@ -135,11 +151,6 @@ ro.charger.enable_suspend=true
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
 persist.vendor.cne.feature=1
 
-# Dalvik/Dex2oat
-PRODUCT_VENDOR_PROPERTIES += \
-dalvik.vm.dex2oat64.enabled=true \
-dalvik.vm.systemuicompilerfilter=speed
-
 # Display/Graphics
 PRODUCT_VENDOR_PROPERTIES += \
 debug.gralloc.enable_fb_ubwc=1 \
@@ -154,7 +165,6 @@ vendor.display.disable_skip_validate=1 \
 vendor.display.disable_rotator_downscale=1 \
 vendor.display.enable_default_color_mode=1 \
 vendor.display.disable_scaler=1 \
-vendor.display.disable_partial_split=1 \
 vendor.gralloc.enable_fb_ubwc=1
 
 PRODUCT_SYSTEM_PROPERTIES += \
@@ -308,8 +318,8 @@ ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
 ro.surface_flinger.protected_contents=true \
 ro.surface_flinger.use_content_detection_for_refresh_rate=true \
 ro.surface_flinger.set_display_power_timer_ms=10000 \
-ro.surface_flinger.set_touch_timer_ms=800 \
-ro.surface_flinger.set_idle_timer_ms=500 \
+ro.surface_flinger.set_touch_timer_ms=200 \
+ro.surface_flinger.set_idle_timer_ms=1000 \
 ro.surface_flinger.wcg_composition_dataspace=143261696
 
 # System
@@ -330,6 +340,10 @@ vendor.usb.rmnet.func.name=rmnet_bam \
 vendor.usb.rmnet.inst.name=rmnet \
 vendor.usb.rndis.func.name=rndis_bam
 
+# Watchdog
+PRODUCT_SYSTEM_PROPERTIES += \
+ro.hw_timeout_multiplier=3
+
 # Wifi
 PRODUCT_VENDOR_PROPERTIES += \
 wifi.interface=wlan0
@@ -337,6 +351,10 @@ wifi.interface=wlan0
 # Wifi Display (Platform)
 PRODUCT_SYSTEM_PROPERTIES += \
 media.wfd.max_resolution=5
+
+# Zygote
+PRODUCT_SYSTEM_PROPERTIES += \
+zygote.critical_window.minute=10
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 # Suppress several logspams on user builds
