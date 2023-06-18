@@ -1,4 +1,0 @@
-allow cnd diag_device:chr_file { open read write getattr ioctl };
-allow cnd radio:binder { transfer };
-allow cnd hostapd:process { sigkill };
-allow cnd sysfs:file { open read };

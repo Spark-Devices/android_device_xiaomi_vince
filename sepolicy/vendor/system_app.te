@@ -5,7 +5,7 @@ allow system_app fm_radio_device:chr_file r_file_perms;
 get_prop(system_app, vendor_bluetooth_prop)
 
 # zram
-r_dir_file(system_app sysfs_zram)
+r_dir_file(system_app, sysfs_zram)
 
 # Battery Health
 allow system_app sysfs_battery_supply:dir { search };

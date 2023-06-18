@@ -1,3 +1,0 @@
-allow zygote device:file { getattr };
-allow zygote exported_camera_prop:file { getattr open read };
-allow zygote self:capability { kill };
