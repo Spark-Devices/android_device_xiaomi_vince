@@ -54,7 +54,7 @@ void check_device()
         heapgrowthlimit = "256m";
         heapsize = "512m";
         heaptargetutilization = "0.6";
-        heapminfree = "512k";
+        heapminfree = "8m";
         heapmaxfree = "16m";
     } else {
         heapstartsize = "8m";
