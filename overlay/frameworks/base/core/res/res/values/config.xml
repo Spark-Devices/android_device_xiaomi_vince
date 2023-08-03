@@ -622,6 +622,21 @@
         <item>com.google.android.apps.recorder</item>
         <item>com.android.settings</item>
         <item>com.android.fmradio</item>
+        <item>com.android.calculator</item>
+        <item>com.android.calculator2</item>
+        <item>com.android.deskclock</item>
+        <item>com.android.documentsui</item>
+        <item>com.android.gallery3d</item>
+        <item>com.google.android.calendar</item>
+        <item>com.google.android.messaging</item>
+        <item>com.google.android.youtube</item>
+        <item>com.pittvandewitt.viperfx</item>
+        <item>io.chaldeaprjkt.gamespace</item>
+        <item>org.lineageos.aperture</item>
+        <item>org.lineageos.eleven</item>
+        <item>org.lineageos.etar</item>
+        <item>org.lineageos.jelly</item>
+        <item>org.lineageos.recorder</item>
     </string-array>
 
     <!-- Whether the new Auto Selection Network UI should be shown -->
