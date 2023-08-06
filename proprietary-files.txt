@@ -604,42 +604,12 @@ system_ext/lib64/libmwqemiptablemgr.so|b45bd5f4e8d0905ea287af059bd7b06df0552127
 -vendor/app/CneApp/CneApp.apk|6e355ca21e53c8a84794f06e1057e62ff2df1a58
 -vendor/app/IWlanService/IWlanService.apk|08472592f4a21ad806c487fc0c70c10bbe7c7ac2
 vendor/bin/cnd|9073b58b10ec0e5e0af3e0f65dcc815cb2b150b9
-vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml|578f3f8f56059bfdbef926bcc68d01c15e06951f
-vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml|1fb42c672a12b6660bdce3ea94e0c43719dd9de8
-vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml|f88e13f1dd7b82388c90358f71813026370c9ed8
-vendor/etc/cne/wqeclient/ATT/ATT_profile4.xml|fb08e04f57797c5684bf734f7ce4bb4968859b18
-vendor/etc/cne/wqeclient/ATT/ATT_profile5.xml|eb726ad1a42b9b78b9ee3b821fc108611bc9eeac
-vendor/etc/cne/wqeclient/ATT/ATT_profile6.xml|be97b46b0d07ee2f6ebcc677d8099ed2140d5d85
-vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml|e7ca213d0998cb3a6a603ad3eca7bda69830ff55
-vendor/etc/cne/wqeclient/ROW/ROW_profile15.xml|0130dfd8326ee710bf4e15718ede87c49a85b763
-vendor/etc/cne/wqeclient/ROW/ROW_profile16.xml|e05b935d7ccf48d306b71c719b2e4df83187d9c0
-vendor/etc/cne/wqeclient/ROW/ROW_profile17.xml|f1b33204799268eda78dd8314f26abf2e37431e2
-vendor/etc/cne/wqeclient/ROW/ROW_profile18.xml|19db16f62dabb806a62f192858a9d52b5bc2a064
-vendor/etc/cne/wqeclient/ROW/ROW_profile19.xml|1fcc57b1fa4dbbc7d250e8dd92acf1527d447eb3
-vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml|169a5209000e357a1a3183e8e5bfdf6fd07c2787
-vendor/etc/cne/wqeclient/ROW/ROW_profile20.xml|7be0614cf0116c39b736c58fe5eca36838aeb3db
-vendor/etc/cne/wqeclient/ROW/ROW_profile21.xml|cc62517e6c37e12ee1ebebbb27f9c22878749be3
-vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml|4be4060e8ac2d9fcea490feec7938cadcff46e1f
-vendor/etc/cne/wqeclient/ROW/ROW_profile32.xml|b87542b9284efe4c2bd0ae868bb9a765c2c3dbc5
-vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml|f88e13f1dd7b82388c90358f71813026370c9ed8
-vendor/etc/cne/wqeclient/ROW/ROW_profile5.xml|96101f6b01436a02572c67a469ff67ccfb738874
-vendor/etc/cne/wqeclient/ROW/ROW_profile6.xml|cef14ff8a160c7ad719b85d024a4b3301c3638d0
-vendor/etc/cne/wqeclient/ROW/ROW_profile7.xml|8d6773a4c418d0dcc4dc9096017d2681c7a1defe
-vendor/etc/cne/wqeclient/VZW/VZW_profile1.xml|c89d3c062790b442cbe941cafc641a4e322f2d59
-vendor/etc/cne/wqeclient/VZW/VZW_profile2.xml|ba14a9df975cf872ed0cbe28bee8fac63cd848d4
-vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml|9b123d81c9b8991499cda33b0706810e0c8fb974
-vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml|ff91feb5060a6df07e3e4d9bc99ae58bccad7649
-vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml|f76c894f3c6d5b6ed35113a088dc3174c900501b
-vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml|14d136e7fcc682311757d3edc0b9d3eaeba11815
-vendor/etc/cne/mwqem.conf|c51d3893b86ab89fae218f3a92c4f9c18ea401a8
-vendor/etc/cne/profileMwqem.xml|947917691684584b7e2ddf3588cd6f8e99f3804f
 vendor/etc/default-permissions/com.qualcomm.qti.cne.xml|c63c37d067e3009735fbc54d4603d43d7d6623e1
 vendor/etc/init/cnd.rc|3a5183df3479500fb729493bc56c71166fc10bce
 vendor/lib64/libcacertclient.so|69ae73b9be13507ff39398ac5813ad709b8b7c32
 vendor/lib64/libcne.so|693161958cfac54f256a5ed1e2ec0392bdb31112
 vendor/lib64/libcneapiclient.so|b6479678e5b0e8b46d8df5eb8bd610aa17be00d0
 vendor/lib64/libcneoplookup.so|60d6abe85061de4fa75e5e4f69d477f37f1f8f64
-vendor/lib64/libcneqmiutils.so|c2e2658698eb8b312ca6b28c1a1088a331bb28b9
 vendor/lib64/libwms.so|604a930c89016ef4851351d8f9e03f62f9fcf692
 vendor/lib64/libwqe.so|4ae892dfb16d6d0d337e7811696ac11a86e4838d
 vendor/lib64/libxml.so|f9b20632e9fd324810caf865faea93e4ff505d91
@@ -1019,7 +989,6 @@ vendor/bin/ATFWD-daemon|ba94a1f2b434f1ae8f536d29b1dbe3d6eea000da
 vendor/bin/adpl|a742bd5fa87d0bf44790e55a67154742b5ee3bfe
 vendor/bin/netmgrd|1561db50ad4c5523ad93df630529790fb04af359
 vendor/bin/port-bridge|819a575730ac41a5766a68a8f80b945c9e570f14
-vendor/bin/qrtr-cfg|9019f1c99cb23913f540433285af0d26c397c121
 vendor/bin/qrtr-lookup|fb31961d7c966f09e5c77a2be17aa8af702fe90b
 vendor/bin/qrtr-ns|2b84b77bcd50e8c65c2151457f885eb434af4585
 vendor/bin/qti|f2f60bc56d505905a0e589f1ae039b81069e3776
@@ -1046,9 +1015,6 @@ vendor/lib64/liboemaids_vendor.so|bc25c678a4981d6f3d16f292247ec3f885be2015
 vendor/lib64/libqcmaputils.so|f33e891b3a90b168f0fce4298e141fce8c8cd8ad
 vendor/lib64/libqrtr.so|b22ee7df87b35ba88b518f0b821cc601cd612183
 vendor/lib64/libqsocket.so|3fa01c9aff6ed96a5ea9886c7696a046c929e339
-vendor/lib64/libril-qc-ltedirectdisc.so|2877ea019548dbce7270da45942061982d5c0f6b
-vendor/lib64/libril-qc-radioconfig.so|b7bed43b6014b35f0e1d1d286f002a7e0f37e777
-vendor/lib64/libril-qcril-hook-oem.so|1536b0a3bccdc1dcc06512248c14238a3405aaeb
 vendor/lib64/librilqmiservices.so|551a21807532e724758cc136a1abed9bca571dc3
 vendor/lib64/libsettings.so|6e821147dbe067b5e74b879de6e43d5bc1916311
 vendor/lib64/libsystem_health_mon.so|2cc55d78ea00b9fe8af9cd88fd8ef8c31ee5f494
@@ -1102,17 +1068,7 @@ vendor/lib64/qcrild_librilutils.so|f12ebc05420621d930ffe7f4b4859117e3c9fc35
 vendor/lib64/qtibus.so|cef56e2d40f69b6b6c60b93edb612744395f7359
 vendor/lib64/qtimutex.so|026d9acf29b23ab0419abfe3066bd4c9f13bf7ae
 
-# Radio (eMBMS) - from LA.UM.9.6.3.r1-04400-89xx.0
--system_ext/app/embms/embms.apk|010db3d97f4faad191f1a53415d7cf0a94dabcd1
-system_ext/etc/permissions/embms.xml|22e7474091f9f71f02dd0cfc76cfa8848a46f079
-system_ext/framework/embmslibrary.jar|b5fe26c1cea597af8a1751332d187f2f574816c1
-system_ext/lib64/libembmsmmosal.so|e208327b968be9710b2dd3628f2aa52271bb6bf1
-system_ext/lib64/libembmsmmparser_lite.so|243fb26fc032b920060708af4e4b3c9b9fd2809d
-system_ext/lib64/libembmssqlite.so|b76a706caf1b0b354ff95398b17130bc8ddc05b9
-system_ext/lib64/libembmstinyxml.so|5a998ab8d31e76ccf50a962c493d800483e03ebf
-
 # Radio (IMS) - from LA.UM.9.6.3.r1-04400-89xx.0
--system_ext/app/imssettings/imssettings.apk|8b47c43d56228dcce93cc8c07c6ceb08cb3d2fe5
 -system_ext/app/uceShimService/uceShimService.apk|e7222c1d9c4fa93418d692a97ee36562e4e1cc94
 vendor/bin/imsdatadaemon|476fb2c270ca3352ee41ca3dc8c49b86517830a5
 vendor/bin/imsqmidaemon|44b0d218106ce8124ca6c2cc956c26f7119645ca
@@ -1198,12 +1154,6 @@ vendor/lib64/libthermalfeature.so|829b2fc0aa8c863d4b4b331e0a2c00663e01efe6
 vendor/bin/time_daemon|3fdbe5c7aeee2fc7e8b699bedd7309f768aae5c7
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 -vendor/lib64/libtime_genoff.so|5f9b4a016db1f2d96a6b8281b6cb88d87e4cdd63
-
-# TUI - from FP3:11/8901.4.A.0019.2
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|15378114c18fd1b1c8f9671f656396285ad1de48
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|b17f0775824bd3580bfd60e51807e9bc4439be72
-vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|ccdb6027a199d5549fc92de8ce2ddb006b4b486d
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|f6b0e0e951394b609f0cb5c19e83a37447d9d292
 
 # Wi-Fi - from LA.UM.9.6.3.r1-04400-89xx.0
 vendor/bin/wcnss_service|48e4a96a9de69bd83791a3b0b2134f5ab1205adc

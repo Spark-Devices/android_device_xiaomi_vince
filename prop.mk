@@ -177,8 +177,7 @@ sdm.debug.disable_skip_validate=1
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
 persist.vendor.dpm.feature=1 \
 persist.vendor.dpmhalservice.enable=1 \
-persist.vendor.dpm.loglevel=0 \
-persist.vendor.mwqem.enable=1
+persist.vendor.dpm.loglevel=0
 
 # DRM
 PRODUCT_VENDOR_PROPERTIES += \
