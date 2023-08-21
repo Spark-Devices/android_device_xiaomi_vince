@@ -94,4 +94,8 @@ void vendor_load_properties()
     // Override ro.control_privapp_permissions
     property_override("ro.control_privapp_permissions", "log");
 
+    // Override dalvik minidebuginfo generation
+    property_override("dalvik.vm.minidebuginfo", "false");
+    property_override("dalvik.vm.dex2oat-minidebuginfo", "false");
+
 }
