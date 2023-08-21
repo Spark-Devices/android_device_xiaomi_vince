@@ -15,9 +15,6 @@ dalvik.vm.image-dex2oat-filter=quicken \
 dalvik.vm.image-dex2oat-threads=8 \
 dalvik.vm.systemuicompilerfilter=speed
 
-PRODUCT_SYSTEM_PROPERTIES += \
-ro.sys.fw.dex2oat_thread_count=8
-
 # Audio
 PRODUCT_VENDOR_PROPERTIES += \
 af.fast_track_multiplier=1 \
