@@ -423,8 +423,11 @@ PRODUCT_PACKAGES += \
     libui_shim.vendor:32
 
 # TextClassifier smart selection model files
-PRODUCT_PACKAGES += \
-    textclassifier.bundle1
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/textclassifier/actions_suggestions.universal.model:$(TARGET_COPY_OUT_SYSTEM)/etc/textclassifier/actions_suggestions.universal.model \
+    $(LOCAL_PATH)/textclassifier/textclassifier.en.model:$(TARGET_COPY_OUT_SYSTEM)/etc/textclassifier/textclassifier.en.model \
+    $(LOCAL_PATH)/textclassifier/lang_id.model:$(TARGET_COPY_OUT_SYSTEM)/etc/textclassifier/lang_id.model \
+    $(LOCAL_PATH)/textclassifier/textclassifier.universal.model:$(TARGET_COPY_OUT_SYSTEM)/etc/textclassifier/textclassifier.universal.model
 
 # Thermal
 PRODUCT_PACKAGES += \
