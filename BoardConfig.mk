@@ -130,6 +130,9 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_vince
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Lineage Health
+TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/power_supply/battery/battery_charging_enabled
+
 # Media
 USE_DEVICE_SPECIFIC_MEDIA := true
 DEVICE_SPECIFIC_MEDIA_PATH := $(DEVICE_PATH)/qcom-caf/media
