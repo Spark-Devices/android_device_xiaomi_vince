@@ -323,6 +323,44 @@ on boot
     chown system graphics /sys/class/graphics/fb0/measured_fps
     chmod 0666 /sys/class/graphics/fb0/measured_fps
 
+on property:vendor.post_boot.parsed=1
+    # Reset read ahead to 128kb
+    write /sys/block/loop0/queue/read_ahead_kb 128
+    write /sys/block/loop1/queue/read_ahead_kb 128
+    write /sys/block/loop2/queue/read_ahead_kb 128
+    write /sys/block/loop3/queue/read_ahead_kb 128
+    write /sys/block/loop4/queue/read_ahead_kb 128
+    write /sys/block/loop5/queue/read_ahead_kb 128
+    write /sys/block/loop6/queue/read_ahead_kb 128
+    write /sys/block/loop7/queue/read_ahead_kb 128
+    write /sys/block/loop8/queue/read_ahead_kb 128
+    write /sys/block/loop9/queue/read_ahead_kb 128
+    write /sys/block/loop10queue/read_ahead_kb 128
+    write /sys/block/loop11/queue/read_ahead_kb 128
+    write /sys/block/loop12/queue/read_ahead_kb 128
+    write /sys/block/loop13/queue/read_ahead_kb 128
+    write /sys/block/loop14/queue/read_ahead_kb 128
+    write /sys/block/loop15/queue/read_ahead_kb 128
+    write /sys/block/mmcblk0/queue/read_ahead_kb 128
+    write /sys/block/mmcblk0rpmb/queue/read_ahead_kb 128
+    write /sys/block/ram0/queue/read_ahead_kb 128
+    write /sys/block/ram1/queue/read_ahead_kb 128
+    write /sys/block/ram2/queue/read_ahead_kb 128
+    write /sys/block/ram3/queue/read_ahead_kb 128
+    write /sys/block/ram4/queue/read_ahead_kb 128
+    write /sys/block/ram5/queue/read_ahead_kb 128
+    write /sys/block/ram6/queue/read_ahead_kb 128
+    write /sys/block/ram7/queue/read_ahead_kb 128
+    write /sys/block/ram8/queue/read_ahead_kb 128
+    write /sys/block/ram9/queue/read_ahead_kb 128
+    write /sys/block/ram10/queue/read_ahead_kb 128
+    write /sys/block/ram11/queue/read_ahead_kb 128
+    write /sys/block/ram12/queue/read_ahead_kb 128
+    write /sys/block/ram13/queue/read_ahead_kb 128
+    write /sys/block/ram14/queue/read_ahead_kb 128
+    write /sys/block/ram15/queue/read_ahead_kb 128
+    write /sys/block/zram0/queue/read_ahead_kb 128
+
 on property:hw.fm.init=*
     write /sys/module/radio_iris_transport/parameters/fmsmd_set ${hw.fm.init}
 
